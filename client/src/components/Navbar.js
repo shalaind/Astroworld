@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'; 
+import { Link } from 'react-router-dom'; 
+
 
 const NavbarDiv = styled.div`
 background-color: black; 
@@ -22,9 +24,11 @@ class Navbar extends Component {
         return (
             <NavbarDiv>
                 <h1>Logo</h1>
-                <h1>Home</h1>
-                <h1>Merch</h1>
-                <h1>Gallery</h1>
+                <ul>
+                    <Link to='/'><li>Home</li></Link>
+                    <Link to='/merch'><li>Merch</li></Link>
+                    <Link to='/gallery'><li>Gallery</li></Link>
+                </ul>
             </NavbarDiv>
         );
     }

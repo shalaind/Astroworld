@@ -7,6 +7,6 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log("MONGODB is now connected")
 })
 
-// {useNewURlParser: true}
 
 module.exports = mongoose;
+// {useNewURlParser: true}

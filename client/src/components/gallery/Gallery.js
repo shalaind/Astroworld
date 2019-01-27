@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
-class ShopList extends Component {
+class Gallery extends Component {
     render() {
         return (
             <div>
-                <h1>Merch</h1>
-
+                <h1>Gallery Page</h1>
             </div>
         );
     }
 }
 
-export default ShopList;
+export default Gallery;
