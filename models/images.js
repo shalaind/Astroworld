@@ -5,7 +5,7 @@ const Image = new Schema({
     userImage: String,
     name: String,
     location: String,
-    imageUrl: []
+    imageUrl: String
 })
 
 module.exports = mongoose.model("Image", Image)

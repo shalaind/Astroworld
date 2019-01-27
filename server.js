@@ -1,12 +1,16 @@
 const express = require('express')
 const app = express()
 const routes = require('./routes/index')
+const fileUpload = require('express-fileupload');
+
 
 app.use(express.urlencoded({
     extended: true
 }))
 
 app.use(express.json())
+
+app.use(fileUpload());
 
 app.use(express.static(__dirname + '/client/build/'))
 

@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'; 
+
+
 
 class AddImageForm extends Component {
     render() {
         return (
             <div>
-                <h1>Image Form</h1>
-                <input type="text" placeholder="Submit Photo"/>
+                <input type="text" placeholder="username"/>
+                <input type="file" placeholder="Submit Profile Photo"/>
+                <input type="file" placeholder="Submit concert Photo"/>
+                <select> Location </select>
+
+
                 <button>Submit</button>
 
             </div>
