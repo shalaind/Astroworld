@@ -5,23 +5,10 @@ import ShopList from './components/merch/ShopList';
 import Gallery from './components/gallery/Gallery';
 import Navbar from './components/Navbar';
 import Footer from './components/footer/Footer';
+import ShopItemDesc from './components/merch/ShopItemDesc'; 
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <Navbar/>
-//         <Homepage/>
-//         <Footer/>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
 
 class App extends Component {
   render() {
@@ -33,6 +20,7 @@ class App extends Component {
             <Route exact path="/" component={Homepage} />
             <Route exact path="/merch" component={ShopList} />
             <Route exact path="/gallery" component={Gallery} />
+            <Route exact path="/merch/itemdesc" component={ShopItemDesc} />
 
           </Switch>
           <Footer/>
