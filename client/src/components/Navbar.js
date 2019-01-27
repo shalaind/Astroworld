@@ -22,6 +22,9 @@ class Navbar extends Component {
         return (
             <NavbarDiv>
                 <h1>Logo</h1>
+                <h1>Home</h1>
+                <h1>Merch</h1>
+                <h1>Gallery</h1>
             </NavbarDiv>
         );
     }
