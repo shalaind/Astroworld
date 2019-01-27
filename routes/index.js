@@ -16,7 +16,7 @@ router.delete('/api/review/:reviewId', reviewController.delete)
 //show images 
 router.get('/api/image', imageController.index)
 //add an image 
-router.post('/api/image/upload', imageController.create)
+router.post('/api/image', imageController.create)
 //delete an image 
 router.delete('/api/image/:imageId', imageController.delete)
 

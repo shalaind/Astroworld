@@ -9,19 +9,16 @@ Image.deleteMany({})
     .then(() => {
         return Image.create(
                 [{
-                        userImage: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Kylie_Jenner2_%28cropped%29.png',
                         name: "Shalain",
                         location: "Atlanta, GA",
                         imageUrl: 'http://i.ebayimg.com/images/g/ui8AAOSwHHFY~nr6/s-l1600.jpg'
                     },
                     {
-                        userImage: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Kylie_Jenner2_%28cropped%29.png',
                         name: "Kenya",
                         location: "Los Angeles, CA",
                         imageUrl: "https://www.billboard.com/files/styles/article_main_image/public/media/Travis-Scott-live-2017-billboard-1548.jpg"
                     },
                     {
-                        userImage: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Kylie_Jenner2_%28cropped%29.png',
                         name: "Karelys",
                         location: "New York, NY",
                         imageUrl: "https://media.timeout.com/images/105274258/750/422/image.jpg"

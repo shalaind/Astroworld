@@ -30,7 +30,6 @@ getAllImages = () => {
             {this.state.image.map((concertPics, i) => (
                 <div key={i}>
                     <img src={concertPics.imageUrl} alt="concert" />
-                    <img src={concertPics.userImage} alt="concert" />
                     <h3>{concertPics.location}</h3>
                     <h3>{concertPics.name}</h3>
 

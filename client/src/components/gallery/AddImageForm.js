@@ -1,19 +1,44 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'; 
+import axios from 'axios'; 
 
 
 
 class AddImageForm extends Component {
+    state = {
+        image: {
+            name: '',
+            location: '',
+            imageUrl: ''
+        }
+    }
+
+ 
+    handleChange = (event) => {
+        const newState = { ...this.state.image }
+        newState[event.target.name] = event.target.value
+        this.setState({ image: newState })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        const imageUpload = this.state.image
+        axios.post('/api/images', imageUpload)
+        .then((res) => {
+            this.props.getAllImages()
+            this.props.toggleAddImageForm()
+        })
+    }
+
     render() {
         return (
             <div>
-                <input type="text" placeholder="username"/>
-                <input type="file" placeholder="Submit Profile Photo"/>
-                <input type="file" placeholder="Submit concert Photo"/>
-                <select> Location </select>
+            <form onSubmit= {this.handleSubmit}>
+                <input type="text" placeholder="Name" name="name" value={this.state.image.name}/><br/>
+                <input type="text" placeholder="Location" name="location" value={this.state.image.location}/><br/>
+                <input type="text" placeholder="Concert Image" name="imageUrl" value={this.state.image.imageUrl}/><br/>
 
-
-                <button>Submit</button>
+                <button type="submit">Submit</button>
+            </form>
 
             </div>
         );
