@@ -7,7 +7,6 @@ width: 100vw;
 height: 50px;
 color: white; 
 padding: 0px;
-position:absolute;
 bottom:0;
 display: flex;
 

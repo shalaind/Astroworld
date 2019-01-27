@@ -11,7 +11,6 @@ width: 100vw;
 height: 300px;
 color: white; 
 padding: 0px;
-position:absolute;
 bottom:0;
 display:flex;
 justify-content: space-around; 

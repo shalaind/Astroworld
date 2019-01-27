@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-
+import Homepage from './components/homepage/Homepage';
 
 
 class App extends Component {
   render() {
     return (
       <div>
-      <Navbar/>
-      <Footer/>
+        <Homepage/>
       </div>
     );
   }

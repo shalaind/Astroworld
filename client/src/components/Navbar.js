@@ -20,6 +20,7 @@ class Navbar extends Component {
         return (
             <NavbarDiv>
                 <h1>this will be a navbar</h1>
+                {/* add links in here to merch, astrolove, home */}
             </NavbarDiv>
         );
     }
