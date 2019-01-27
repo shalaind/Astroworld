@@ -9,16 +9,16 @@ const reviewController = {
     },
    
     update: (req, res) => {
-        Review.findByIdAndUpdate(req.params.userId, req.body)
+        Review.findByIdAndUpdate(req.params.reviewId, req.body)
             .then((updatedReview) => {
                 updatedReview.save()
                 res.send(updatedReview)
             })
     },
     delete: (req, res) => {
-        Review.findByIdAndDelete(req.params.userId)
+        Review.findByIdAndDelete(req.params.reviewId)
             .then(() => {
-                res.send("it was deleted")
+                res.sendStatus(200)
             })
     },
     create: (req, res) => {

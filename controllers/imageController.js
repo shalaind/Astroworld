@@ -9,11 +9,12 @@ const imageController = {
     },
 
     delete: (req, res) => {
-        Image.findByIdAndDelete(req.params.userId)
+        Image.findByIdAndDelete(req.params.imageId)
             .then(() => {
-                res.send("image was deleted")
+                res.sendStatus(200)
             })
     },
+
     create: (req, res) => {
         Image.create(req.body)
             .then((newImage) => {

@@ -5,20 +5,20 @@ const reviewController = require('../controllers/reviewController')
 
 
 //show reviews 
-router.get('/api/review', reviewController.show)
+router.get('/api/review', reviewController.index)
 //add a review 
-router.post('/api/review/add', reviewController.create)
+router.post('/api/review', reviewController.create)
 //edit the review 
-router.patch('/api/review/:id', reviewController.update)
+router.patch('/api/review/:reviewId', reviewController.update)
 //delete the review 
-router.delete('/api/review/:id', reviewController.delete)
+router.delete('/api/review/:reviewId', reviewController.delete)
 
 //show images 
-router.get('/api/image', imageController.show)
+router.get('/api/image', imageController.index)
 //add an image 
-router.post('/api/image/add', imageController.create)
+router.post('/api/image', imageController.create)
 //delete an image 
-router.delete('/api/image/:id', imageController.delete)
+router.delete('/api/image/:imageId', imageController.delete)
 
 
 module.exports = router
