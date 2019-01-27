@@ -5,13 +5,7 @@ const Review = new Schema({
     userImage: String,
     name: String,
     location: String,
-    comment: String,
-    images: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Images'
-        }
-    ]
+    comment: String
 })
 
 module.exports = mongoose.model('Review', Review)
