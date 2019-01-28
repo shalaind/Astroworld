@@ -28,6 +28,8 @@ class Navbar extends Component {
                     <Link to='/'><li>Home</li></Link>
                     <Link to='/merch'><li>Merch</li></Link>
                     <Link to='/gallery'><li>Gallery</li></Link>
+                    <Link to='/listening-party'><li>Listening Party</li></Link>
+
                 </ul>
             </NavbarDiv>
         );

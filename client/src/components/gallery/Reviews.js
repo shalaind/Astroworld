@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
 import styled from 'styled-components'; 
+import AddReviewForm from './AddReviewForm';
 
 const ReviewDiv = styled.div`
 img {
@@ -12,34 +13,46 @@ img {
 
 class Reviews extends Component {
     state = {
-        review: [{}]
-      
+        review: [{}],
+        reviewFormVisible: false
+    }
+
+    toggleAddReviewForm = () => {
+        this.setState({ reviewFormVisible: !this.state.reviewFormVisible })
     }
 
     componentDidMount() {
-        this.getAllImages()
+        this.getAllReviews()
     }
     
-    getAllImages = () => {
+    getAllReviews = () => {
         axios.get(`/api/review`)
         .then((res) => this.setState({ review: res.data }))
     }
 
     render() {
         return (
-            <ReviewDiv>
+            <div>
+                <ReviewDiv>
 
-                  {this.state.review.map((allReviews, i) => (
-                <div key={i}>
-                    <img src={allReviews.userImage} alt="concert" />
-                    <h3>{allReviews.location}</h3>
-                    <h3>{allReviews.name}</h3>
-                    <p>{allReviews.comment}</p>
+                    {this.state.review.map((allReviews, i) => (
+                    <div key={i}>
+                        <img src={allReviews.userImage} alt="concert" />
+                        <h3>{allReviews.location}</h3>
+                        <h3>{allReviews.name}</h3>
+                        <p>{allReviews.comment}</p>
 
-                </div>
-                ))}
+                    </div>
+                    ))}
 
-            </ReviewDiv>
+
+                </ReviewDiv>
+                    <p className="pointer" onClick= {this.toggleAddReviewForm}>Leave a Comment</p>
+
+                        {this.state.reviewFormVisible ? <AddReviewForm getAllReviews={this.getAllReviews}
+                    toggleAddReviewForm={this.toggleAddReviewForm}/>
+                        : null}
+            </div>
         );
     }
 }

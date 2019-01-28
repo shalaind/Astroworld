@@ -1,8 +1,9 @@
+const mongoose = require('./connection')
+
 const Image = require('../models/Images')
 
 const Review = require('../models/Reviews')
 
-const mongoose = require('./connection')
 
 
 Image.deleteMany({})

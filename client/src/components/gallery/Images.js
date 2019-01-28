@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
 import styled from 'styled-components'; 
+import AddImageForm from './AddImageForm'; 
 
 const Upload = styled.div`
 img {
@@ -8,35 +9,54 @@ img {
 }
 
 `
-
 class Images extends Component {
     state = {
-        image: [{}]
-      
-}
-
+        image: [{}],
+        imageFormVisible: false
+    }
+  
 componentDidMount() {
     this.getAllImages()
 }
 
 getAllImages = () => {
     axios.get(`/api/image`)
-    .then((res) => this.setState({ image: res.data }))
+    .then((res) => 
+    // console.log(res.data)
+    
+    this.setState({ image: res.data })
+    )
 }
+
+toggleAddImageForm = () => {
+    this.setState({ imageFormVisible: !this.state.imageFormVisible })
+}
+
     render() {
         return (
-            <Upload>
 
-            {this.state.image.map((concertPics, i) => (
-                <div key={i}>
-                    <img src={concertPics.imageUrl} alt="concert" />
-                    <h3>{concertPics.location}</h3>
-                    <h3>{concertPics.name}</h3>
+            <div>
 
-                </div>
-                ))}
+                <Upload>
 
-            </Upload>
+                    {this.state.image.map((concertPics, i) => (
+                        <div key={i}>
+                            <img src={concertPics.imageUrl} alt="concert" />
+                            <h3>{concertPics.location}</h3>
+                            <h3>{concertPics.name}</h3>
+                            <p>{concertPics._id}</p>
+                            <button>Delete</button>
+                        </div>
+                    ))}
+
+                </Upload>
+
+               <p className= "pointer" onClick= {this.toggleAddImageForm}>Add a pic</p>
+                {this.state.imageFormVisible ? <AddImageForm getAllImages={this.getAllImages}
+                    toggleAddImageForm={this.toggleAddImageForm}/>
+                  : null}
+                
+            </div>
         );
     }
 }
