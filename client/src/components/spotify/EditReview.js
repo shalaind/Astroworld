@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
 
+
 class editReview extends Component {
     state = {
-        review: [{}],
+        review: [{}]
     }
 
     toggleEditReviewForm = () => {
@@ -31,8 +32,7 @@ class editReview extends Component {
     render() {
         return (
             <div>
-            
-
+        
                 <form onSubmit= {this.handleSubmit}>
                     <input type="text" placeholder="Comment" name="comment" value={this.state.review.comment} onChange={this.handleChange}/><br/>
                     <button onClick={this.toggleEditAddReviewForm}>Submit</button>

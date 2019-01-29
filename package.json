@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/shalaind/Astroworld#readme",
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.18.0",
     "concurrently": "^4.1.0",
     "dotenv": "^6.2.0",
@@ -27,10 +28,15 @@
     "express-fileupload": "^1.1.1-alpha.1",
     "mongoose": "^5.4.7",
     "nodemon": "^1.18.9",
+    "react": "^16.7.0",
+    "react-rating": "^1.6.2",
     "react-router-dom": "^4.3.1",
     "styled-components": "^4.1.3"
   },
   "engines": {
     "node": "10.13.0"
+  },
+  "devDependencies": {
+    "react-edit-inline": "^1.0.8"
   }
 }

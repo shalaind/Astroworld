@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
+import Rating from 'react-rating' ;
+
+
 
 
 class AddReviewForm extends Component {
@@ -34,6 +37,9 @@ class AddReviewForm extends Component {
         return (
             <div>
             <form onSubmit= {this.handleSubmit}>
+            <Rating
+            />
+
                 <input type="text" placeholder="User Image" name="userImage" value={this.state.review.userImage} onChange={this.handleChange}/><br/>
                 <input type="text" placeholder="Name" name="name" value={this.state.review.name} onChange={this.handleChange}/><br/>
                 <input type="text" placeholder="Comment" name="comment" value={this.state.review.comment} onChange={this.handleChange}/><br/>

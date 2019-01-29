@@ -6,6 +6,8 @@ class ListeningParty extends Component {
     render() {
         return (
             <div>
+
+            
              <h1>Listening Party</h1>
              <h2>Preview the tracks below and vote on the ones you like</h2>
             <SpotifyPlayer/>
@@ -26,6 +28,7 @@ class ListeningParty extends Component {
             <SpotifyPlayer/>
             <SpotifyPlayer/>
 
+
             <h2>Fan Reviews</h2>
             <Reviews/>
 
@@ -33,9 +36,6 @@ class ListeningParty extends Component {
             <button> Listen on Itunes </button>
             <button>Listen on apple music </button>
             <button> Listen on google play </button>
-
-
-
 
             </div>
         );

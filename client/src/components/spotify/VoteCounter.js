@@ -10,7 +10,7 @@ class VoteCounter extends Component {
 
 
       <div>
-      <h1>counter</h1>
+      <div class="js-rating" data-like="8" data-dislike="2"></div>
     </div>
 
 
