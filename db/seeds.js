@@ -40,19 +40,16 @@ Review.deleteMany({})
                 [{
                         userImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kylie_Jenner2_%28cropped%29.png/220px-Kylie_Jenner2_%28cropped%29.png',
                         name: 'Atlien',
-                        location: 'Lousville, Kentucky, KFC Yum Center',
                         comment: 'Travis Scott is awesome! I had such a good time at this concert. There was a mosh pit and the energy was high throughout the entire night!'
                     },
                     {
                         userImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kylie_Jenner2_%28cropped%29.png/220px-Kylie_Jenner2_%28cropped%29.png',
                         name: 'Atlien',
-                        location: 'Lousville, Kentucky, KFC Yum Center',
                         comment: 'Travis Scott is awesome! I had such a good time at this concert. There was a mosh pit and the energy was high throughout the entire night!'
                     },
                     {
                         userImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kylie_Jenner2_%28cropped%29.png/220px-Kylie_Jenner2_%28cropped%29.png',
                         name: 'Atlien',
-                        location: 'Lousville, Kentucky, KFC Yum Center',
                         comment: 'Travis Scott is awesome! I had such a good time at this concert. There was a mosh pit and the energy was high throughout the entire night!'
                     }
                 ]

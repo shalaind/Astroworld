@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SpotifyPlayer from './SpotifyPlayer';
+import Reviews from './Reviews';
 
 class ListeningParty extends Component {
     render() {
@@ -24,6 +25,9 @@ class ListeningParty extends Component {
             <SpotifyPlayer/>
             <SpotifyPlayer/>
             <SpotifyPlayer/>
+
+            <h2>Fan Reviews</h2>
+            <Reviews/>
 
             <button> Listen on Spotify </button>
             <button> Listen on Itunes </button>

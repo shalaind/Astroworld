@@ -26,26 +26,24 @@ img{
 }
 `
 
-
 class ShopItemDesc extends Component {
     render() {
         return (
             <div>
 
-
             <OutsideCon>
             <LeftColumn>
-                <img src= "https://stockx.imgix.net/products/streetwear/Travis-Scott-Astrowolrd-Wish-You-Were-Here-Hoodie-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1542407701" alt="travis scott merch"/>
+                <img src= {this.props.itemImage} alt="travis scott merch"/>
             </LeftColumn>
             <RightColumn>
 
-                <h1> Item Name</h1>
-                <h2>$45.00</h2>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h1> {this.props.itemName}</h1>
+                <h2>{this.props.itemPrice}</h2>
+                <p>{this.props.itemDesc}</p>
                 <ul>
-                    <li>Property 1</li>
-                    <li>Property 2</li>
-                    <li>Property 3</li>
+                    <li>{this.props.bulletOne}</li>
+                    <li>{this.props.bulletTwo}</li>
+                    <li>{this.props.bulletThree}</li>
                 </ul>
                 <button> Add to Cart </button>
             </RightColumn>
@@ -55,9 +53,21 @@ class ShopItemDesc extends Component {
 
                 <RelatedItems>
                 <h1>Related Items</h1>
-                    <ShopItem />
-                    <ShopItem />
-                    <ShopItem />
+                    <ShopItem 
+                        itemImage = "https://stockx.imgix.net/products/streetwear/Travis-Scott-Astrowolrd-Wish-You-Were-Here-Hoodie-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1542407701" alt="travis scott merch"
+                        itemName = "Astro Hoodie" 
+                        itemPrice = "$45.00"
+                    />
+                    <ShopItem 
+                        itemImage = "https://stockx.imgix.net/products/streetwear/Travis-Scott-Astrowolrd-Wish-You-Were-Here-Hoodie-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1542407701" alt="travis scott merch"
+                        itemName = "Astro Hoodie" 
+                        itemPrice = "$45.00"
+                    />
+                    <ShopItem 
+                        itemImage = "https://stockx.imgix.net/products/streetwear/Travis-Scott-Astrowolrd-Wish-You-Were-Here-Hoodie-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1542407701" alt="travis scott merch"
+                        itemName = "Astro Hoodie" 
+                        itemPrice = "$45.00"
+                    />
                 </RelatedItems>
 
                 
