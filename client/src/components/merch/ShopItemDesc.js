@@ -54,20 +54,24 @@ class ShopItemDesc extends Component {
                 <RelatedItems>
                 <h1>Related Items</h1>
                     <ShopItem 
-                        itemImage = "https://stockx.imgix.net/products/streetwear/Travis-Scott-Astrowolrd-Wish-You-Were-Here-Hoodie-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1542407701" alt="travis scott merch"
+                        itemLink = "astro-hoodie"
+                        itemImage = "https://i.imgur.com/qU1lVDU.jpg" alt="travis scott merch"
                         itemName = "Astro Hoodie" 
                         itemPrice = "$45.00"
                     />
                     <ShopItem 
-                        itemImage = "https://stockx.imgix.net/products/streetwear/Travis-Scott-Astrowolrd-Wish-You-Were-Here-Hoodie-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1542407701" alt="travis scott merch"
-                        itemName = "Astro Hoodie" 
+                        itemLink = "astro-tie-dye-tshirt"
+                        itemImage = "https://i.imgur.com/nyNTNdf.jpg" alt="travis scott merch"
+                        itemName = "Tie Dye Tee" 
                         itemPrice = "$45.00"
                     />
                     <ShopItem 
-                        itemImage = "https://stockx.imgix.net/products/streetwear/Travis-Scott-Astrowolrd-Wish-You-Were-Here-Hoodie-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1542407701" alt="travis scott merch"
-                        itemName = "Astro Hoodie" 
+                        itemLink = "astro-denim-jacket"
+                        itemImage = "https://i.imgur.com/6Vai1WS.png?1" alt="travis scott merch"
+                        itemName = "Astro Denim Jacket" 
                         itemPrice = "$45.00"
                     />
+               
                 </RelatedItems>
 
                 
