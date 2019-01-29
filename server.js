@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const routes = require('./routes/index')
 const fileUpload = require('express-fileupload');
-require('./lib/models')(app);
 
 app.use(express.urlencoded({
     extended: true
