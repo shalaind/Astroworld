@@ -5,7 +5,7 @@ class SpotifyPlayer extends Component {
     render() {
         return (
             <div>
-            <iframe title="star gazing" src="https://open.spotify.com/embed/track/7wBJfHzpfI3032CSD7CE2m" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe title="star gazing" src={this.props.spotifyLink} width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             <VoteCounter/>
             </div>
         );
@@ -13,3 +13,4 @@ class SpotifyPlayer extends Component {
 }
 
 export default SpotifyPlayer;
+
