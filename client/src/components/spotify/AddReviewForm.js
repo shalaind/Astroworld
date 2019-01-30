@@ -37,7 +37,13 @@ class AddReviewForm extends Component {
         return (
             <div>
             <form onSubmit= {this.handleSubmit}>
-            <Rating
+            <Rating rate={this.state.review.rating}
+                onChange={(rate) =>{
+                    let review = this.state.review;
+                    review.rating = rate;
+                    this.setState({review})
+                } }
+
             />
 
                 <input type="text" placeholder="User Image" name="userImage" value={this.state.review.userImage} onChange={this.handleChange}/><br/>

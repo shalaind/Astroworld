@@ -22,7 +22,7 @@ class HpSection extends Component {
     render() {
         return (
             <HpSectionDiv>
-                <h1> this is a section </h1>
+                <h1> Show Some Love </h1>
                 <button>Click Here </button>
             </HpSectionDiv>
         );

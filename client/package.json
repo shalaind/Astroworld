@@ -6,6 +6,7 @@
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.18.0",
+    "raf": "^3.4.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-edit-inline2": "^1.0.2",

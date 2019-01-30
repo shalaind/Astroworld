@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import ShopItem from '../merch/ShopItem'; 
 
 const textCenter = {
     textAlign: "center",
@@ -15,6 +16,10 @@ display: flex;
 justify-content: center;
 align-items: center; 
 color: black; 
+
+img {
+    width: 300px; 
+}
 
 
 h1{
@@ -39,10 +44,26 @@ class HpMerchSection extends Component {
                 <h1 style={textCenter}>Merchandise</h1>
 
                 <MerchDiv>
-                    <h1>Merch Img 1</h1>
-                    <h1>Merch Img 2</h1>
-                    <h1>Merch Img 3</h1>
+                    <ShopItem 
+                        itemLink = "astro-hoodie"
+                        itemName = "Astro Hoodie"
+                        itemPrice = "$45.00"
+                        itemImage = "https://i.imgur.com/qU1lVDU.jpg"
+                    />
+                    <ShopItem 
+                        itemLink = "astro-tie-dye-tshirt"
+                        itemImage = "https://i.imgur.com/nyNTNdf.jpg" alt="travis scott merch"
+                        itemName = "Tie Dye Tee" 
+                        itemPrice = "$60.00"
+                    />
+                    <ShopItem 
+                        itemLink = "astro-denim-jacket"
+                        itemImage = "https://i.imgur.com/6Vai1WS.png?1" alt="travis scott merch"
+                        itemName = "Astro Denim Jacket" 
+                        itemPrice = "$75.00"
+                    />
                 </MerchDiv>
+
                 <ButtonDiv>
                     <button>View More</button>
                 </ButtonDiv>

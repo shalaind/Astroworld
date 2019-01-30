@@ -3,6 +3,8 @@ import axios from 'axios';
 import styled from 'styled-components'; 
 import AddReviewForm from './AddReviewForm';
 import EditReview from './EditReview'; 
+import Rating from 'react-rating' ;
+
 
 
 const ReviewDiv = styled.div`
@@ -17,7 +19,8 @@ class Reviews extends Component {
     state = {
         review: [{}],
         reviewFormVisible: false,
-        editReviewFormVisible: false
+        editReviewFormVisible: false,
+
 
     }
 
@@ -25,8 +28,10 @@ class Reviews extends Component {
         this.setState({ reviewFormVisible: !this.state.reviewFormVisible })
     }
 
-    toggleEditAddReviewForm = () => {
-        this.setState({ editReviewFormVisible: !this.state.editReviewFormVisible })
+    toggleEditAddReviewForm = (indx) => {
+        let currentItems  = this.state.review;
+        currentItems[indx].isVisible = !currentItems[indx].isVisible;
+        this.setState({ review: currentItems })
     }
 
     componentDidMount() {
@@ -35,7 +40,13 @@ class Reviews extends Component {
     
     getAllReviews = () => {
         axios.get(`/api/review`)
-        .then((res) => this.setState({ review: res.data }))
+        .then((res) => {
+            let reviews = res.data.map((eachReview) => {
+                eachReview.isVisible = false; 
+                return eachReview;
+            })
+            this.setState({ review: reviews });
+        })
     }
 
     deleteReview = (reviewId) => {
@@ -59,18 +70,25 @@ class Reviews extends Component {
 
                     {this.state.review.map((allReviews, i) => (
                     <div key={i}>
+                        <Rating 
+                        initialRating = {allReviews.rating}
+                        readonly
+                        />
                         <img src={allReviews.userImage} alt="concert" />
                         <h3>{allReviews.name}</h3>
-                        <p>{allReviews.comment}</p>
+                        <div>
+                            {
+                                allReviews.isVisible 
+                                ? <EditReview 
+                                    review = {allReviews}
+                                    getAllReviews={this.getAllReviews}
+                                />
+                                :   <p onClick={ ()=> (this.toggleEditAddReviewForm(i))}>{allReviews.comment}</p>                       
+                            }
+                        </div>
+                      
                         <button onClick={()=>(this.deleteReview(allReviews._id))}>delete</button>
 
-                        <button onClick={ () => (this.toggleEditAddReviewForm(allReviews._id)) }>edit</button>
-                            {
-                                this.state.editReviewFormVisible 
-                                ? <EditReview reviewId = {allReviews._id} getAllReviews={this.getAllReviews}
-                    toggleEditAddReviewForm={this.toggleEditAddReviewForm} />
-                                : null                        
-                            }
 
                         </div>
                     ))}

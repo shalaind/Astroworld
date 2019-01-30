@@ -4,28 +4,31 @@ import axios from 'axios';
 
 class editReview extends Component {
     state = {
-        review: [{}]
+        comment: this.props.review.comment
     }
+
+    //comment = this.props.review.comment;
 
     toggleEditReviewForm = () => {
         this.setState({ editReviewFormVisible: !this.state.editReviewFormVisible })
     }
 
     handleChange = (event) => {
-        const newState = { ...this.state.review }
-        newState[event.target.name] = event.target.value
-        this.setState({ review: newState })
+        // const newState = { ...this.state.review }
+        // newState[event.target.name] = event.target.value
+         this.setState({ comment: event.target.value })
+        //this.props.review.comment = event.target.value;
     }
 
     handleSubmit = (event) => {
         event.preventDefault()
-        const updateReview = this.state.review
-        const reviewId = this.props.reviewId
-        axios.patch(`/api/review/${reviewId}`, updateReview)
+        let review = this.props.review
+        review.comment = this.state.comment
+        review.isVisible = false;
+        axios.patch(`/api/review/${review._id}`, review)
         .then((res) => {
             console.log('it worked')
             this.props.getAllReviews()
-            this.props.toggleEditAddReviewForm()
         })
     }
 
@@ -34,7 +37,7 @@ class editReview extends Component {
             <div>
         
                 <form onSubmit= {this.handleSubmit}>
-                    <input type="text" placeholder="Comment" name="comment" value={this.state.review.comment} onChange={this.handleChange}/><br/>
+                    <input type="text" onChange= {this.handleChange} placeholder="Comment" name="comment" value={this.state.comment}/><br/>
                     <button onClick={this.toggleEditAddReviewForm}>Submit</button>
                 </form>
             </div>

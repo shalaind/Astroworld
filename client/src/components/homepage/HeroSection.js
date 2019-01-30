@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
-const HeroDiv = styled.div`
-background-color: grey; 
-width: 100vw; 
-height: 100vh;
-color: white; 
-text-align: center; 
-h1{
-    margin: 0; 
-}
-`
 
 class HeroSection extends Component {
     render() {
         return (
-            <HeroDiv>
-                <h1>Full Screen Hero Image</h1>
-            </HeroDiv>
+            <div className = "heroImage">
+                <img className="cloudTransition" src="https://i.imgur.com/nCdwJjH.png" alt="cloud transition"/>
+                <img className="cloudTransition2" src="https://i.imgur.com/vhpF5Ln.png" alt="cloud transition" />
+                <img className="cloudTransition3" src="https://i.imgur.com/nCdwJjH.png" alt="cloud transition" />
+            </div>
         );
     }
 }

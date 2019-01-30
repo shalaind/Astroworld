@@ -15,13 +15,17 @@ import ThrillsAndChillsPants from './components/merch/shopItemPages/ThrillsAndCh
 
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import ScrollInNav from './components/ScrollInNav';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
+      
+        <ScrollInNav scrollInHeight={100}>
           <Navbar />
+        </ScrollInNav>
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/merch" component={ShopList} />
