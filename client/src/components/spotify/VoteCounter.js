@@ -25,11 +25,12 @@ class VoteCounter extends Component {
 
 
       <div>
-      <button onClick= {this.likeCounter}> thumbs up</button>
-      <h4> {this.state.likeCount} </h4>
+      <img onClick= {this.dislikeCounter} style={{ width: "50px" }}src="https://i.imgur.com/ZBMl2gT.png" alt="thumbs down" />
+      <h4> {this.state.dislikeCount} </h4>
 
-         <button onClick = {this.dislikeCounter}> thumbs down</button>
-      <h4> {this.state.dislikeCount}</h4>
+
+      <img onClick= {this.likeCounter} style={{ width: "50px" }}src="https://i.imgur.com/bGt59sB.png" alt="thumbs up" />
+      <h4> {this.state.likeCount}</h4>
     </div>
 
 

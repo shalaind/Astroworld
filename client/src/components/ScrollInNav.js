@@ -61,8 +61,7 @@ class ScrollInNav extends Component {
     
       update = () => {
         let currentScrollY = this.getScrollY();
-        console.log(currentScrollY);
-        console.log(this.props.scrollInHeight);
+        
     
         this.setState({
           hidden: currentScrollY < this.props.scrollInHeight

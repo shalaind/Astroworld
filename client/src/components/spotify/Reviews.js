@@ -3,8 +3,12 @@ import axios from 'axios';
 import styled from 'styled-components'; 
 import AddReviewForm from './AddReviewForm';
 import EditReview from './EditReview'; 
-import Rating from 'react-rating' ;
-
+// import Ratings from 'react-ratings-declarative';
+import Rating from 'react-rating';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+library.add(faStar ) 
 
 
 const ReviewDiv = styled.div`
@@ -70,10 +74,25 @@ class Reviews extends Component {
 
                     {this.state.review.map((allReviews, i) => (
                     <div key={i}>
+
+                        {/* <Ratings>
+                    <Ratings.Widget rating = {allReviews.rating} selectedRating = {allReviews.rating} />
+                            <Ratings.Widget />
+                            <Ratings.Widget />
+                            <Ratings.Widget  />
+                            <Ratings.Widget />
+                        </Ratings> */}
+                       
+
+              
+
                         <Rating 
+                        emptySymbol={<img src="https://i.imgur.com/8pYLYaH.png" style= {{width: "25px" }} alt= "star icon" className="icon" />}
+                        fullSymbol={<img src="https://i.imgur.com/42SoNeS.png" style= {{width: "25px" }} alt = "star icon" className="icon" />} 
                         initialRating = {allReviews.rating}
                         readonly
                         />
+                        <h1>{allReviews.title}</h1>
                         <img src={allReviews.userImage} alt="concert" />
                         <h3>{allReviews.name}</h3>
                         <div>

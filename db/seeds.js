@@ -38,16 +38,22 @@ Review.deleteMany({})
     .then(() => {
         return Review.create(
                 [{
+                        title: "this album is fire! ",
+                        rating: 4,
                         userImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kylie_Jenner2_%28cropped%29.png/220px-Kylie_Jenner2_%28cropped%29.png',
                         name: 'Atlien',
                         comment: 'Travis Scott is awesome! I had such a good time at this concert. There was a mosh pit and the energy was high throughout the entire night!'
                     },
                     {
+                        title: "this album is fire! ",
+                        rating: 3,
                         userImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kylie_Jenner2_%28cropped%29.png/220px-Kylie_Jenner2_%28cropped%29.png',
                         name: 'Atlien',
                         comment: 'Travis Scott is awesome! I had such a good time at this concert. There was a mosh pit and the energy was high throughout the entire night!'
                     },
                     {
+                        title: "Not impressed ",
+                        rating: 2, 
                         userImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kylie_Jenner2_%28cropped%29.png/220px-Kylie_Jenner2_%28cropped%29.png',
                         name: 'Atlien',
                         comment: 'Travis Scott is awesome! I had such a good time at this concert. There was a mosh pit and the energy was high throughout the entire night!'

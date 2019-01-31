@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/shalaind/Astroworld#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.13",
+    "@fortawesome/free-solid-svg-icons": "^5.7.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.18.0",
     "concurrently": "^4.1.0",
@@ -31,6 +33,7 @@
     "react": "^16.7.0",
     "react-headroom": "^2.2.4",
     "react-rating": "^1.6.2",
+    "react-ratings-declarative": "^3.4.1",
     "react-router-dom": "^4.3.1",
     "styled-components": "^4.1.3"
   },

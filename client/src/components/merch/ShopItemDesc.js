@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'; 
 import ShopItem from './ShopItem';
+import Navbar from '../Navbar';
 
 const OutsideCon = styled.div`
 display: flex; 
@@ -30,6 +31,7 @@ class ShopItemDesc extends Component {
     render() {
         return (
             <div>
+            <Navbar/>
 
             <OutsideCon>
             <LeftColumn>
@@ -67,7 +69,7 @@ class ShopItemDesc extends Component {
                     />
                     <ShopItem 
                         itemLink = "astro-denim-jacket"
-                        itemImage = "https://i.imgur.com/6Vai1WS.png?1" alt="travis scott merch"
+                        itemImage = "https://i.imgur.com/LmhV1AF.png" alt="travis scott merch"
                         itemName = "Astro Denim Jacket" 
                         itemPrice = "$45.00"
                     />

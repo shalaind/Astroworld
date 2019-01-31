@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import SpotifyPlayer from './SpotifyPlayer';
 import Reviews from './Reviews';
+import Navbar from '../Navbar';
 
 class ListeningParty extends Component {
     render() {
         return (
             <div>
-
+            <Navbar />
             
              <h1>Listening Party</h1>
              <h2>Preview the tracks below and vote on the ones you like</h2>
