@@ -1,40 +1,38 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'; 
 import { Link } from 'react-router-dom'; 
 
-
-const NavbarDiv = styled.div`
-background-color: black; 
-width: 100vw; 
-height: 60px;
-color: white; 
-padding: 0px;
-top: 0px;
-display: flex; 
-
-
-h1{
-    margin: 0; 
-    margin-left: 20px; 
-}
-
-`
 
 class Navbar extends Component {
     render() {
         return (
-            <NavbarDiv>
-                <img src="https://i.imgur.com/rtTtV8k.png" alt="astroworld logo" style={{
-                    height: "60%"
-                }} />
-                <ul>
-                    <Link to='/'>Home</Link>
-                    <Link to='/merch'>Merch</Link>
-                    <Link to='/gallery'>Gallery</Link>
-                    <Link to='/listening-party'>Listening Party</Link>
 
-                </ul>
-            </NavbarDiv>
+
+
+<nav class="navbar is-black customNav" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="https://i.imgur.com/rtTtV8k.png" width="150"  alt="astro logo" />
+    </a>
+
+    <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+
+     <Link to='/' className= "navbar-item navLinks" >Home</Link>
+    <Link to='/merch' className= "navbar-item navLinks">Merch</Link>
+    <Link to='/gallery' className= "navbar-item navLinks">Gallery</Link>
+     <Link to='/listening-party' className= "navbar-item navLinks">Listening Party</Link>
+    </div>
+
+  </div>
+</nav>
+          
         );
     }
 }
