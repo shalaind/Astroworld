@@ -1,49 +1,26 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import ShopItem from '../merch/ShopItem'; 
 
-const textCenter = {
-    textAlign: "center",
-    fontSize: "22pt" 
-}
-
-
-const MerchDiv = styled.div`
-width: 100vw; 
-height: 50vh;
-padding: 0px;
-display: flex;
-justify-content: center;
-align-items: center; 
-color: black; 
-
-img {
-    width: 300px; 
-}
-
-
-h1{
-    margin: 0; 
-    margin-right: 40px;
-}
-`
-
-const ButtonDiv = styled.div`
-
-display: flex; 
-justify-content: center; 
-button{
-    margin: 50px; 
-}
-`
 
 class HpMerchSection extends Component {
     render() {
         return (
-            <div>
-                <h1 style={textCenter}>Merchandise</h1>
+            <div className= 'hpOuter'>
+                <h1 className= "pageHeader">
+                <span style={{color: "gold"}}>M</span>
+                <span style={{color: "red"}}>E</span>
+                <span style={{color: "black"}}>R</span>
+                <span style={{color: "blue"}}>C</span>
+                <span style={{color: "magenta"}}>H</span>
+                <span style={{color: "green"}}>A</span>
+                <span style={{color: "orange"}}>N</span>
+                <span style={{color: "grey"}}>D</span>
+                <span style={{color: "gold"}}>I</span>
+                <span style={{color: "red"}}>S</span>
+                <span style={{color: "black"}}>E</span>
+                </h1>
 
-                <MerchDiv>
+                <div className='hpMerch'>
                     <ShopItem 
                         itemLink = "astro-hoodie"
                         itemName = "Astro Hoodie"
@@ -58,15 +35,17 @@ class HpMerchSection extends Component {
                     />
                     <ShopItem 
                         itemLink = "astro-denim-jacket"
-                        itemImage = "https://i.imgur.com/6Vai1WS.png?1" alt="travis scott merch"
+                        itemImage = "https://i.imgur.com/LmhV1AF.png" alt="travis scott merch"
                         itemName = "Astro Denim Jacket" 
                         itemPrice = "$75.00"
                     />
-                </MerchDiv>
 
-                <ButtonDiv>
-                    <button>View More</button>
-                </ButtonDiv>
+                </div>
+
+
+                <div className='buttonDiv'>
+                <a href= "/merch" class="button is-warning"> Shop Now </a>
+                </div>
 
             </div>
         );

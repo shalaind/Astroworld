@@ -1,8 +1,9 @@
 /* Global Styling */
 .pointer {
-  cursor: pointer;
+  cursor: pointer ;
   font-weight: 600; 
 }
+
 
 /* -------- */
 /* Homepage */
@@ -97,7 +98,6 @@
 
 }
 
-
 .navLinks {
   font-weight: 500; 
 }
@@ -105,5 +105,30 @@
 .customNav {
   background-color: black; 
   text-align: left; 
+
+}
+
+.hpMerch {
+  width: 100vw; 
+  height: 50vh;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  color: black; 
+}
+
+.hpMerch img{
+  width: 300px; 
+}
+
+.hpOuter {
+  margin: 25px;
+}
+
+.buttonDiv {
+  display: flex; 
+  justify-content: center; 
+  margin: 40px; 
 
 }
