@@ -8,16 +8,16 @@ class FooterS2 extends Component {
           Astro News
         </h2>
 
-        <div class="field">
-          <div class="control">
+        <div className="field">
+          <div className="control">
             <input
-              class="input"
+              className="input"
               type="text"
               placeholder="youremail@astroworld.com"
             />
-            <div class="field">
-              <div class="control">
-                <label class="checkbox">
+            <div className="field">
+              <div className="control">
+                <label className="checkbox">
                   <input type="checkbox" />  I agree to the terms and conditions
                 </label>
               </div>

@@ -8,21 +8,21 @@ class Navbar extends Component {
 
 
 
-<nav class="navbar is-black customNav" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
+<nav className="navbar is-black customNav" role="navigation" aria-label="main navigation">
+  <div className="navbar-brand">
+    <a className="navbar-item" href="/">
       <img src="https://i.imgur.com/rtTtV8k.png" width="150"  alt="astro logo" />
     </a>
 
-    <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" >
+    <button className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" >
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </button>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
+  <div id="navbarBasicExample" className="navbar-menu">
+    <div className="navbar-start">
 
      <Link to='/' className= "navbar-item navLinks" >Home</Link>
     <Link to='/merch' className= "navbar-item navLinks">Merch</Link>

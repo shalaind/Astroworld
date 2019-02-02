@@ -1,17 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
-import styled from "styled-components";
 import AddReviewForm from "./AddReviewForm";
 import EditReview from "./EditReview";
 // import Ratings from 'react-ratings-declarative';
 import Rating from "react-rating";
 
-const ReviewDiv = styled.div`
-  img {
-    width: 50px;
-    border-radius: 20px;
-  }
-`;
 
 class Reviews extends Component {
   state = {
@@ -60,18 +53,17 @@ class Reviews extends Component {
     return (
       <div>
         {this.state.review.map((allReviews, i) => (
-          <div style={{ width: "70vw" }} class="container" key={i}>
-            <article class="media">
-              <figure class="media-left">
-                <p class="image is-64x64">
+          <div style={{ width: "70vw" }} className="container" key={i}>
+            <article className="media">
+              <figure className="media-left">
+                <p className="image is-64x64">
                   <img src={allReviews.userImage} alt="profile" />
                 </p>
               </figure>
 
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <strong>{allReviews.title}</strong>
+              <div className="media-content">
+                <div className="content">
+                    <p><strong>{allReviews.title}</strong></p>
 
                     <Rating
                       emptySymbol={
@@ -96,6 +88,7 @@ class Reviews extends Component {
 
                     <br />
                     <p>by {allReviews.name} </p>
+
                     <div>
                       {allReviews.isVisible ? (
                         <EditReview
@@ -108,16 +101,15 @@ class Reviews extends Component {
                         </p>
                       )}
                     </div>
+
                     <br />
-                    <small>{Date}</small>
-                  </p>
                 </div>
               </div>
 
-              <div class="media-right">
+              <div className="media-right">
                 <button
                   onClick={() => this.deleteReview(allReviews._id)}
-                  class="delete"
+                  className="delete"
                 />
               </div>
             </article>

@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Rating from "react-rating";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-library.add(faStar )
-
-
-
-
 
 
 class AddReviewForm extends Component {
@@ -17,8 +9,9 @@ class AddReviewForm extends Component {
       userImage: "",
       name: "",
       location: "",
-      comment: "",
-    }
+      comment: ""
+    }, 
+      selectedFile: null
   };
 
   handleChange = event => {
@@ -26,6 +19,19 @@ class AddReviewForm extends Component {
     newState[event.target.name] = event.target.value;
     this.setState({ review: newState });
   };
+
+  // uploadImage = event => {
+  //   const newState = { ...this.state.review };
+  //   newState[event.target.name] = event.target.value;
+  //   this.setState({ review: newState });
+
+  //   this.setState({selectedFile: event.target.files[0]})
+
+  //   let image = event.target.value; 
+  //   let files = event.target.files; 
+
+  //   console.log("here's your pic", image , files)
+  // }
 
   handleSubmit = event => {
     event.preventDefault();
@@ -39,98 +45,96 @@ class AddReviewForm extends Component {
 
   render() {
     return (
-
       <div>
+        <div style={{ width: "70vw" }} class="container">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img
+                  src="https://bulma.io/images/placeholders/128x128.png"
+                  alt="profile"
+                />
+              </p>
+            </figure>
 
-         <div style={{ width: "70vw" }} class="container">
+            <div class="media-content">
+            
+              <input
+                style={{ width: "300px" }}
+                class="input"
+                type="text"
+                placeholder="Title"
+                name="title"
+                value={this.state.review.title}
+                onChange={this.handleChange}
+              />   {" "}
+                <Rating
+                emptySymbol={
+                  <img
+                    src="https://i.imgur.com/8pYLYaH.png"
+                    style={{ width: "25px" }}
+                    alt="star icon"
+                    className="icon"
+                  />
+                }
+                fullSymbol={
+                  <img
+                    src="https://i.imgur.com/42SoNeS.png"
+                    style={{ width: "25px" }}
+                    alt="star icon"
+                    className="icon"
+                  />
+                }
+                onChange={rate => {
+                  let review = { ...this.state.review };
+                  review.rating = rate;
+                  this.setState({ review });
+                }}
+                rate={this.state.review.rating}
+              />
+              <br />
+              <input
+               style={{ width: "300px", marginTop:"10px" }}
+                class = "input"
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={this.state.review.name}
+                onChange={this.handleChange}
+              />
+              <form onSubmit={this.handleSubmit}>
+                <div class="field">
+                  <p class="control">
+                    <textarea
+                      style={{ marginTop:"10px" }}
+                      class="textarea"
+                      placeholder="What ya think?..."
+                      name="comment"
+                      onChange={this.handleChange}
+                      value={this.state.review.comment}
+                    />
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control">
+                    <button class="button">Submit</button>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </article>
+        </div>
 
-<article class="media">
-<figure class="media-left">
-  <p class="image is-64x64">
-    <img
-      src="https://bulma.io/images/placeholders/128x128.png"
-      alt="profile"
-    />
-  </p>
-</figure>
-
-<div class="media-content">
-    <form onSubmit={this.handleSubmit}>
-  <div class="field">
-    <p class="control">
-
-      <textarea class="textarea" 
-      placeholder="What ya think?..." 
-      name="comment"
-      onChange={this.handleChange}
-      value={this.state.review.comment}
-      />
-    </p>
-  </div>
-  <div class="field">
-    <p class="control">
-      <button class="button">Submit</button>
-    </p>
-  </div>
-    </form>
-</div>
-</article>
-</div>
-
-
-
-
-
-
-      {/* the start of old form  */}
+        {/* the start of old form  */}
         <form onSubmit={this.handleSubmit}>
-        
-          <Rating
-              emptySymbol={<img src="https://i.imgur.com/8pYLYaH.png" style= {{width: "25px" }} alt= "star icon" className="icon" />}
-              fullSymbol={<img src="https://i.imgur.com/42SoNeS.png" style= {{width: "25px" }} alt = "star icon" className="icon" />} 
-            onChange={(rate) => {
-              let review = {...this.state.review};
-              review.rating = rate;
-              this.setState({ review }) 
-            }}
-
-            rate={this.state.review.rating}
-          />
-
           <input
-            type="text"
-            placeholder="Title"
-            name="title"
-            value={this.state.review.title}
-            onChange={this.handleChange}
-          />
-          <br />
-          <input
-            type="text"
+            type="file"
             placeholder="User Image"
             name="userImage"
             value={this.state.review.userImage}
-            onChange={this.handleChange}
-          />
-          <br />
-          <input
-            type="text"
-            placeholder="Name"
-            name="name"
-            value={this.state.review.name}
-            onChange={this.handleChange}
-          />
-          <br />
-          <input
-            type="text"
-            placeholder="Comment"
-            name="comment"
-            onChange={this.handleChange}
-            value={this.state.review.comment}
             
+            onChange={this.handleChange}
           />
-          <br />
-          <button>Submit</button>
         </form>
       </div>
     );

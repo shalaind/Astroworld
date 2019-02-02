@@ -22,10 +22,11 @@ const reviewController = {
             })
     },
     create: (req, res) => {
+
         Review.create(req.body)
             .then((newReview) => {
-                res.send(newReview)
-            })
+                    res.send(newReview)
+                })
     }
 }
 
