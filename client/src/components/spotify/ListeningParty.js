@@ -8,6 +8,10 @@ class ListeningParty extends Component {
         return (
             <div>
             <Navbar />
+
+            <div className="fwHeader">
+            <h1>Listening Party</h1>
+        </div>
             
              <h1>Listening Party</h1>
              <h2>Preview the tracks below and vote on the ones you like</h2>

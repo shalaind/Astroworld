@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import ShopItemDesc from '../ShopItemDesc';
 
 class AstroTieDye extends Component {
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
+    
     render() {
         return (
             <div>

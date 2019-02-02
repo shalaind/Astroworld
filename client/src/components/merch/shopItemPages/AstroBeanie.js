@@ -3,6 +3,11 @@ import ShopItemDesc from '../ShopItemDesc';
 
 
 class AstroBeanie extends Component {
+
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
+
     render() {
         return (
             <div>

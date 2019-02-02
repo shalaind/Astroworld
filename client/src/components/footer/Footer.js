@@ -6,7 +6,7 @@ import FooterS2 from './FooterS2';
 import FooterS3 from './FooterS3';
 
 const FooterDiv = styled.div`
-background-color: black; 
+background-color: #020202; 
 width: 100vw; 
 height: 300px;
 color: white; 

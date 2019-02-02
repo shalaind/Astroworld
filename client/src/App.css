@@ -100,13 +100,9 @@
 
 .navLinks {
   font-weight: 500; 
-}
-
-.customNav {
-  background-color: black; 
-  text-align: left; 
 
 }
+
 
 .hpMerch {
   width: 100vw; 
@@ -132,3 +128,34 @@
   margin: 40px; 
 
 }
+
+/* .footerTop {
+
+} */
+
+.footerBottom {
+  background-color: #070707; 
+  width: 100vw; 
+  height: 50px;
+  color: white; 
+  padding: 0px;
+  bottom:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerBottom img {
+  margin-left: 10px;
+}
+
+.fwHeader {
+  width: 100vw; 
+  height: 40vh;
+  /* background: url('https://i.imgur.com/3hrdK1Z.jpg') */
+  background-image: linear-gradient( rgba(147, 2, 135, 0.849), rgba(98, 0, 255, 0.856)), url('https://i.imgur.com/3hrdK1Z.jpg'); 
+  background-repeat:no-repeat; 
+  background-size:cover;
+}
+
+

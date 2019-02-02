@@ -11,6 +11,7 @@ class FooterS3 extends Component {
                      <li>Location Three - 5/12/20</li>
                      <li>Location Four - 3/12/20</li>
                  </ul>
+                 <img style={{width:"150px"}}src="https://i.imgur.com/CiWATtn.png" alt="ticketmaster" />
 
             </div>
         );
