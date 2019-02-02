@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ShopItem from '../merch/ShopItem'; 
+import { Link } from 'react-router-dom'; 
 
 
 class HpMerchSection extends Component {
@@ -44,7 +45,7 @@ class HpMerchSection extends Component {
 
 
                 <div className='buttonDiv'>
-                <a href= "/merch" class="button is-warning"> Shop Now </a>
+                <Link to= '/merch' class="button is-warning"> Shop Now </Link>
                 </div>
 
             </div>
