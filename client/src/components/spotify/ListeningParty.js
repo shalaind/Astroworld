@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import SpotifyPlayer from './SpotifyPlayer';
 import Reviews from './Reviews';
 import Navbar from '../Navbar';
+import PageHeader from '../PageHeader';
 
 class ListeningParty extends Component {
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
+    
     render() {
         return (
             <div>
             <Navbar />
-
-            <div className="fwHeader">
-            <h1>Listening Party</h1>
-        </div>
-            
+            <PageHeader />
              <h1>Listening Party</h1>
              <h2>Preview the tracks below and vote on the ones you like</h2>
             <SpotifyPlayer 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ShopItem from './ShopItem';
 import styled from 'styled-components'; 
 import Navbar from '../Navbar';
+import PageHeader from '../PageHeader';
 
 
 const ShopItems = styled.div`
@@ -19,6 +20,7 @@ class ShopList extends Component {
         return (
             <div>
                 <Navbar />
+                <PageHeader />
                 <h1>Merch</h1>
                 <ShopItems>
                     <ShopItem 

@@ -74,18 +74,7 @@ class Reviews extends Component {
 
                     {this.state.review.map((allReviews, i) => (
                     <div key={i}>
-
-                        {/* <Ratings>
-                    <Ratings.Widget rating = {allReviews.rating} selectedRating = {allReviews.rating} />
-                            <Ratings.Widget />
-                            <Ratings.Widget />
-                            <Ratings.Widget  />
-                            <Ratings.Widget />
-                        </Ratings> */}
-                       
-
-              
-
+                    
                         <Rating 
                         emptySymbol={<img src="https://i.imgur.com/8pYLYaH.png" style= {{width: "25px" }} alt= "star icon" className="icon" />}
                         fullSymbol={<img src="https://i.imgur.com/42SoNeS.png" style= {{width: "25px" }} alt = "star icon" className="icon" />} 
