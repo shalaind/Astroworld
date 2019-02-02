@@ -3,12 +3,14 @@ import SpotifyPlayer from './SpotifyPlayer';
 import Reviews from './Reviews';
 import Navbar from '../Navbar';
 import PageHeader from '../PageHeader';
+import 'bulma/css/bulma.css'
+
 
 class ListeningParty extends Component {
     componentDidMount(){
         window.scrollTo(0, 0)
     }
-    
+
     render() {
         return (
             <div>
@@ -69,7 +71,7 @@ class ListeningParty extends Component {
             />
 
 
-            <h2>Fan Reviews</h2>
+            <h1 style={{fontSize: "50pt"}}>Fan Reviews</h1>
             <Reviews/>
 
             <button> Listen on Spotify </button>

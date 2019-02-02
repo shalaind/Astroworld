@@ -39,21 +39,52 @@ class AddReviewForm extends Component {
 
   render() {
     return (
+
       <div>
+
+         <div style={{ width: "70vw" }} class="container">
+
+<article class="media">
+<figure class="media-left">
+  <p class="image is-64x64">
+    <img
+      src="https://bulma.io/images/placeholders/128x128.png"
+      alt="profile"
+    />
+  </p>
+</figure>
+
+<div class="media-content">
+    <form onSubmit={this.handleSubmit}>
+  <div class="field">
+    <p class="control">
+
+      <textarea class="textarea" 
+      placeholder="What ya think?..." 
+      name="comment"
+      onChange={this.handleChange}
+      value={this.state.review.comment}
+      />
+    </p>
+  </div>
+  <div class="field">
+    <p class="control">
+      <button class="button">Submit</button>
+    </p>
+  </div>
+    </form>
+</div>
+</article>
+</div>
+
+
+
+
+
+
+      {/* the start of old form  */}
         <form onSubmit={this.handleSubmit}>
-          {/* // <Ratings */}
-          {/* //         rating={this.state.review.rating}
-            //         widgetRatedColors="yellow"
-            //         changeRating={this.changeRating}
-
-            //         >
-            //         <Ratings.Widget widgetHoverColor="purple"/>
-            //         <Ratings.Widget widgetHoverColor="purple"/>
-            //         <Ratings.Widget widgetHoverColor="purple"/>
-            //         <Ratings.Widget widgetHoverColor="purple" />
-            //         <Ratings.Widget widgetHoverColor="purple" />
-            // </Ratings> */}
-
+        
           <Rating
               emptySymbol={<img src="https://i.imgur.com/8pYLYaH.png" style= {{width: "25px" }} alt= "star icon" className="icon" />}
               fullSymbol={<img src="https://i.imgur.com/42SoNeS.png" style= {{width: "25px" }} alt = "star icon" className="icon" />} 

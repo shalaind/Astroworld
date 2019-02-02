@@ -1,119 +1,148 @@
-import React, { Component } from 'react';
-import axios from 'axios'; 
-import styled from 'styled-components'; 
-import AddReviewForm from './AddReviewForm';
-import EditReview from './EditReview'; 
+import React, { Component } from "react";
+import axios from "axios";
+import styled from "styled-components";
+import AddReviewForm from "./AddReviewForm";
+import EditReview from "./EditReview";
 // import Ratings from 'react-ratings-declarative';
-import Rating from 'react-rating';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-library.add(faStar ) 
-
+import Rating from "react-rating";
 
 const ReviewDiv = styled.div`
-img {
-    width: 50px; 
-    border-radius: 20px; 
-}
-
-`
+  img {
+    width: 50px;
+    border-radius: 20px;
+  }
+`;
 
 class Reviews extends Component {
-    state = {
-        review: [{}],
-        reviewFormVisible: false,
-        editReviewFormVisible: false,
+  state = {
+    review: [{}],
+    reviewFormVisible: false,
+    editReviewFormVisible: false
+  };
 
+  toggleAddReviewForm = () => {
+    this.setState({ reviewFormVisible: !this.state.reviewFormVisible });
+  };
 
-    }
+  toggleEditAddReviewForm = indx => {
+    let currentItems = this.state.review;
+    currentItems[indx].isVisible = !currentItems[indx].isVisible;
+    this.setState({ review: currentItems });
+  };
 
-    toggleAddReviewForm = () => {
-        this.setState({ reviewFormVisible: !this.state.reviewFormVisible })
-    }
+  componentDidMount() {
+    this.getAllReviews();
+  }
 
-    toggleEditAddReviewForm = (indx) => {
-        let currentItems  = this.state.review;
-        currentItems[indx].isVisible = !currentItems[indx].isVisible;
-        this.setState({ review: currentItems })
-    }
+  getAllReviews = () => {
+    axios.get(`/api/review`).then(res => {
+      let reviews = res.data.map(eachReview => {
+        eachReview.isVisible = false;
+        return eachReview;
+      });
+      this.setState({ review: reviews });
+    });
+  };
 
-    componentDidMount() {
-        this.getAllReviews()
-    }
-    
-    getAllReviews = () => {
-        axios.get(`/api/review`)
-        .then((res) => {
-            let reviews = res.data.map((eachReview) => {
-                eachReview.isVisible = false; 
-                return eachReview;
-            })
-            this.setState({ review: reviews });
-        })
-    }
+  deleteReview = reviewId => {
+    axios.delete(`/api/review/${reviewId}`).then(() => {
+      this.setState({
+        review: this.state.review.filter(item => item._id !== reviewId)
+      });
+    });
+  };
 
-    deleteReview = (reviewId) => {
-        axios.delete(`/api/review/${reviewId}`).then(()=> {
-            this.setState({
-                review: this.state.review.filter(item => item._id !== reviewId)
-            })
-        })
-    }
+  editReview = reviewId => {
+    axios.patch(`/api/review/${reviewId}`).then(() => console.log("review"));
+  };
 
-    editReview = (reviewId) => {
-        axios.patch(`/api/review/${reviewId}`).then(()=>
-            console.log('review')
-        )
-    }
+  render() {
+    return (
+      <div>
+        {this.state.review.map((allReviews, i) => (
+          <div style={{ width: "70vw" }} class="container" key={i}>
+            <article class="media">
+              <figure class="media-left">
+                <p class="image is-64x64">
+                  <img src={allReviews.userImage} alt="profile" />
+                </p>
+              </figure>
 
-    render() {
-        return (
-            <div>
-                <ReviewDiv>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>{allReviews.title}</strong>
 
-                    {this.state.review.map((allReviews, i) => (
-                    <div key={i}>
-                    
-                        <Rating 
-                        emptySymbol={<img src="https://i.imgur.com/8pYLYaH.png" style= {{width: "25px" }} alt= "star icon" className="icon" />}
-                        fullSymbol={<img src="https://i.imgur.com/42SoNeS.png" style= {{width: "25px" }} alt = "star icon" className="icon" />} 
-                        initialRating = {allReviews.rating}
-                        readonly
+                    <Rating
+                      emptySymbol={
+                        <img
+                          src="https://i.imgur.com/8pYLYaH.png"
+                          style={{ width: "25px" }}
+                          alt="star icon"
+                          className="icon"
                         />
-                        <h1>{allReviews.title}</h1>
-                        <img src={allReviews.userImage} alt="concert" />
-                        <h3>{allReviews.name}</h3>
-                        <div>
-                            {
-                                allReviews.isVisible 
-                                ? <EditReview 
-                                    review = {allReviews}
-                                    getAllReviews={this.getAllReviews}
-                                />
-                                :   <p onClick={ ()=> (this.toggleEditAddReviewForm(i))}>{allReviews.comment}</p>                       
-                            }
-                        </div>
-                      
-                        <button onClick={()=>(this.deleteReview(allReviews._id))}>delete</button>
+                      }
+                      fullSymbol={
+                        <img
+                          src="https://i.imgur.com/42SoNeS.png"
+                          style={{ width: "25px" }}
+                          alt="star icon"
+                          className="icon"
+                        />
+                      }
+                      initialRating={allReviews.rating}
+                      readonly
+                    />
 
+                    <br />
+                    <p>by {allReviews.name} </p>
+                    <div>
+                      {allReviews.isVisible ? (
+                        <EditReview
+                          review={allReviews}
+                          getAllReviews={this.getAllReviews}
+                        />
+                      ) : (
+                        <p onClick={() => this.toggleEditAddReviewForm(i)}>
+                          {allReviews.comment}
+                        </p>
+                      )}
+                    </div>
+                    <br />
+                    <small>{Date}</small>
+                  </p>
+                </div>
+              </div>
 
-                        </div>
-                    ))}
+              <div class="media-right">
+                <button
+                  onClick={() => this.deleteReview(allReviews._id)}
+                  class="delete"
+                />
+              </div>
+            </article>
 
+      
+          </div>
+        ))}
 
-                    </ReviewDiv>
-   
+        {/* end of map */}
+     
 
-                <p className="pointer" onClick= {this.toggleAddReviewForm}>Leave a Comment</p>
-                
-                {this.state.reviewFormVisible ? <AddReviewForm getAllReviews={this.getAllReviews}
-                    toggleAddReviewForm={this.toggleAddReviewForm}/>
-                        : null}
+        <p className="pointer" onClick={this.toggleAddReviewForm}>
+          Leave a Comment
+        </p>
 
-            </div>
-        );
-    }
+        {this.state.reviewFormVisible ? (
+          <AddReviewForm
+            getAllReviews={this.getAllReviews}
+            toggleAddReviewForm={this.toggleAddReviewForm}
+          />
+        ) : null}
+      </div>
+
+    );
+  }
 }
 
 export default Reviews;

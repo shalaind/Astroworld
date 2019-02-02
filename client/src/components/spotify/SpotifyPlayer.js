@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import VoteCounter from "./VoteCounter";
-import "bulma/css/bulma.css";
+import AudioPlayer from "react-h5-audio-player";
 
 class SpotifyPlayer extends Component {
   render() {
     return (
-    
-        <div className="card">
+      <div>
+        <div className="card" style={{width: "500px", zIndex: "-6"}}>
+          <AudioPlayer
+            src="https://open.spotify.com/track/7wBJfHzpfI3032CSD7CE2m?si=kGBJCUntRMO0BFxUBq7uAQ"
+            onPlay={e => console.log("onPlay")}
+          />
           <iframe
             title="star gazing"
             src={this.props.spotifyLink}
@@ -17,6 +21,7 @@ class SpotifyPlayer extends Component {
             allow="encrypted-media"
           />
           <VoteCounter />
+        </div>
       </div>
     );
   }

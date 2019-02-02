@@ -33,9 +33,6 @@ class VoteCounter extends Component {
       <h4> {this.state.likeCount}</h4>
     </div>
 
-
-
-
         );
     }
 }

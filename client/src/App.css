@@ -119,7 +119,8 @@
 }
 
 .hpOuter {
-  margin: 25px;
+  padding: 25px;
+
 }
 
 .buttonDiv {
@@ -152,7 +153,6 @@
 .fwHeader {
   width: 100vw; 
   height: 40vh;
-  /* background: url('https://i.imgur.com/3hrdK1Z.jpg') */
   background-image: linear-gradient( rgba(147, 2, 135, 0.849), rgba(98, 0, 255, 0.856)), url('https://i.imgur.com/3hrdK1Z.jpg'); 
   background-repeat:no-repeat; 
   background-size:cover;
