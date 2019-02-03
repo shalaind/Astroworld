@@ -13,7 +13,7 @@ class Gallery extends Component {
         return (
             <div>
             <Navbar />
-            <PageHeader pageTitle = "AstroLove" />
+            <PageHeader pageTitle = "Astro Love" />
                 <Images />
             </div>
         );

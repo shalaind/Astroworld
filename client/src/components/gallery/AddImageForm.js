@@ -32,11 +32,11 @@ class AddImageForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container" style={{width: "200px"}}>
             <form onSubmit= {this.handleSubmit}>
-                <input class="input" type="text" placeholder="Name" name="name" value={this.state.image.name} onChange={this.handleChange}/><br/>
-                <input class="input" type="text" placeholder="Location" name="location" value={this.state.image.location} onChange={this.handleChange}/><br/>
-                <input class="input" type="text" placeholder="Concert Image" name="imageUrl" value={this.state.image.imageUrl} onChange={this.handleChange}/><br/>
+                <input class="input" type="text" placeholder="Name" name="name" value={this.state.image.name} onChange={this.handleChange}/><br/><br/>
+                <input class="input" type="text" placeholder="Location" name="location" value={this.state.image.location} onChange={this.handleChange}/><br/><br/>
+                <input class="input" type="text" placeholder="Concert Image" name="imageUrl" value={this.state.image.imageUrl} onChange={this.handleChange}/><br/><br/>
                 <button class="button is-danger">Submit</button>
             </form>
 

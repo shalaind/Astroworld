@@ -51,26 +51,36 @@ class Reviews extends Component {
   render() {
     return (
       <div>
+
+      <div class="container" >
+
+       <h1 class="homepageMerch" style={{fontSize: "30pt", textAlign: "center"}}>
+       <span style={{color: "gold"}}>R</span>
+       <span style={{color: "red"}}>E</span>
+       <span style={{color: "black"}}>V</span>
+       <span style={{color: "blue"}}>I</span>
+       <span style={{color: "magenta"}}>E</span>
+       <span style={{color: "green"}}>W</span>
+       <span style={{color: "orange"}}>S</span>
+       
+       </h1>
+
         {this.state.review.map((allReviews, i) => (
           <div style={{ width: "70vw" }} className="container" key={i}>
             <article className="media">
-              <figure className="media-left">
-                <p className="image is-64x64">
-                  <img src={allReviews.userImage} alt="profile" />
-                </p>
-              </figure>
+         
 
               <div className="media-content">
                 <div className="content">
-                  <p>
+                  <p style = {{margin: "0"}}>
                     <strong>{allReviews.title}</strong>
-                  </p>
+                  
 
                   <Rating
                     emptySymbol={
                       <img
                         src="https://i.imgur.com/8pYLYaH.png"
-                        style={{ width: "25px" }}
+                        style={{ width: "25px"}}
                         alt="star icon"
                         className="icon"
                       />
@@ -85,9 +95,7 @@ class Reviews extends Component {
                     }
                     initialRating={allReviews.rating}
                     readonly
-                  />
-
-                  <br />
+                  /> </p>
                   <p>by {allReviews.name} </p>
 
                   <div>
@@ -129,7 +137,7 @@ class Reviews extends Component {
           </div>
         ))}
 
-        <div style={{ width: "900px", marginBottom: "20px" }} class="container">
+        <div style={{ width: "70vw", marginBottom: "20px" }} class="container">
           <p className="pointer" onClick={this.toggleAddReviewForm}>
             Leave a Comment
           </p>
@@ -142,6 +150,8 @@ class Reviews extends Component {
             />
           ) : null}
       </div>
+      </div>
+
     );
   }
 }

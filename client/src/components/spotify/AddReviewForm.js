@@ -56,31 +56,7 @@ class AddReviewForm extends Component {
       <div style={{ margin: "30px" }}>
         <div style={{ width: "70vw"}} class="container">
           <article class="media">
-            <figure class="media-left">
-              <div class="field">
-                <div style={{ width: "10vw" }} class="file is-small has-name is-boxed is-warning">
-                  <label class="file-label">
-                    <input
-                      onClick={this.imageUpload}
-                      class="file-input"
-                      type="file"
-                      name="userImage"
-                      id="file"
-
-                    />
-                    <span class="file-cta">
-                      <span class="file-icon">
-                        <i class="fas fa-upload" />
-                      </span>
-                      <span class="file-label">User Image…</span>
-                    </span>
-                    <span class="file-name" id="filename">
-                      Screen Shot 2017-07-29 at 15.54.25.png
-                    </span>
-                  </label>
-                </div>
-              </div>
-            </figure>
+           
 
             <div class="media-content">
               <input

@@ -70,7 +70,6 @@ class ListeningParty extends Component {
             />
 
 
-            <h1 style={{fontSize: "30pt"}}>Fan Reviews</h1>
 
             <Reviews/>
 

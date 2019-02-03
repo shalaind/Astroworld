@@ -1,71 +1,85 @@
-import React, { Component } from 'react';
-import axios from 'axios'; 
-import styled from 'styled-components'; 
-import AddImageForm from './AddImageForm'; 
+import React, { Component } from "react";
+import axios from "axios";
+import AddImageForm from "./AddImageForm";
 
-const Upload = styled.div`
-img {
-    width: 300px; 
-}
-
-`
 class Images extends Component {
-    state = {
-        image: [{}],
-        imageFormVisible: false
-    }
-  
-componentDidMount() {
-    this.getAllImages()
-}
+  state = {
+    image: [{}],
+    imageFormVisible: false,
+    hovered: false
+  };
 
-getAllImages = () => {
-    axios.get(`/api/image`)
-    .then((res) => 
-    // console.log(res.data)
-    
-    this.setState({ image: res.data })
-    )
-}
+  componentDidMount() {
+    this.getAllImages();
+  }
 
-deleteImage = (imageId) => {
-    axios.delete(`/api/image/${imageId}`).then(()=> {
-        this.setState({
-            image: this.state.image.filter(item => item._id !== imageId)
-        })
-    })
-}
+  getAllImages = () => {
+    axios.get(`/api/image`).then(res =>
+      // console.log(res.data)
 
-toggleAddImageForm = () => {
-    this.setState({ imageFormVisible: !this.state.imageFormVisible })
-}
+      this.setState({ image: res.data })
+    );
+  };
 
-    render() {
-        return (
+  deleteImage = imageId => {
+    axios.delete(`/api/image/${imageId}`).then(() => {
+      this.setState({
+        image: this.state.image.filter(item => item._id !== imageId)
+      });
+    });
+  };
 
-            <div>
+  rollOverData = event => {
+    console.log("you are hovering");
+  };
 
-                <Upload>
+  toggleAddImageForm = () => {
+    this.setState({ imageFormVisible: !this.state.imageFormVisible });
+  };
 
-                    {this.state.image.map((concertPics, i) => (
-                        <div key={i}>
-                            <img src={concertPics.imageUrl} alt="concert" />
-                            <h3>{concertPics.location}</h3>
-                            <h3>{concertPics.name}</h3>
-                            <button onClick={()=>(this.deleteImage(concertPics._id))}>Delete</button>
-                        </div>
-                    ))}
+  render() {
+    return (
+      <div style={{ marginTop: "2em" }}>
+        <div class="imagePostsOuter container">
+          {this.state.image.map((concertPics, i) => (
+            <div key={i}>
+              <div class="imagePosts">
+                <div>
+                  <div class="imgCon">
+                    <img
+                      class="eachImg"
+                      onClick={() => this.deleteImage(concertPics._id)}
+                      src={concertPics.imageUrl}
+                      alt="concert"
+                    />
 
-                </Upload>
-
-               <p className= "pointer" onClick= {this.toggleAddImageForm}>Add a pic</p>
-                {this.state.imageFormVisible ? <AddImageForm getAllImages={this.getAllImages}
-                    toggleAddImageForm={this.toggleAddImageForm}/>
-                  : null}
-                
+                    <span class="imgText">
+                      <strong style={{ color: "white" }}>
+                        {concertPics.location}
+                      </strong>
+                      <h3>By: {concertPics.name} </h3>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-        );
-    }
+          ))}
+        </div>
+        <div class="container" style={{ marginTop: "30px", marginBottom: "30px", textAlign: "center"}}>
+          <button class="button is-danger">View More</button> <br />
+          <p className="pointer button is-text" onClick={this.toggleAddImageForm}>
+            Add a Pic
+          </p>
+          {this.state.imageFormVisible ? (
+            <AddImageForm
+              getAllImages={this.getAllImages}
+              toggleAddImageForm={this.toggleAddImageForm}
+            />
+          ) : null}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Images;
