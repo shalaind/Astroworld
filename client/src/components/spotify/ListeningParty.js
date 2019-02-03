@@ -71,7 +71,8 @@ class ListeningParty extends Component {
             />
 
 
-            <h1 style={{fontSize: "50pt"}}>Fan Reviews</h1>
+            <h1 style={{fontSize: "30pt"}}>Fan Reviews</h1>
+
             <Reviews/>
 
             <button> Listen on Spotify </button>

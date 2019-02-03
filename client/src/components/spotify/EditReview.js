@@ -37,8 +37,8 @@ class editReview extends Component {
             <div>
         
                 <form onSubmit= {this.handleSubmit}>
-                    <input type="text" onChange= {this.handleChange} placeholder="Comment" name="comment" value={this.state.comment}/><br/>
-                    <button onClick={this.toggleEditAddReviewForm}>Submit</button>
+                    <textarea class="textarea" type="text" onChange= {this.handleChange} placeholder="Comment" name="comment" value={this.state.comment}/><br/>
+                    <button class="button is-warning is-small" onClick={this.toggleEditAddReviewForm}>Submit</button>
                 </form>
             </div>
         );

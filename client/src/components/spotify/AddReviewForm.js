@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import Rating from "react-rating";
 
-
 class AddReviewForm extends Component {
   state = {
     review: {
@@ -10,8 +9,8 @@ class AddReviewForm extends Component {
       name: "",
       location: "",
       comment: ""
-    }, 
-      selectedFile: null
+    },
+    selectedFile: null
   };
 
   handleChange = event => {
@@ -27,8 +26,8 @@ class AddReviewForm extends Component {
 
   //   this.setState({selectedFile: event.target.files[0]})
 
-  //   let image = event.target.value; 
-  //   let files = event.target.files; 
+  //   let image = event.target.value;
+  //   let files = event.target.files;
 
   //   console.log("here's your pic", image , files)
   // }
@@ -43,22 +42,47 @@ class AddReviewForm extends Component {
     });
   };
 
+  imageUpload = () => {
+    let file = document.getElementById("file");
+    file.onchange = function() {
+      if (file.files.length > 0) {
+        document.getElementById("filename").innerHTML = file.files[0].name;
+      }
+    };
+  };
+
   render() {
     return (
       <div>
         <div style={{ width: "70vw" }} class="container">
           <article class="media">
             <figure class="media-left">
-              <p class="image is-64x64">
-                <img
-                  src="https://bulma.io/images/placeholders/128x128.png"
-                  alt="profile"
-                />
-              </p>
+              <div class="field">
+                <div style={{ width: "10vw" }} class="file is-small has-name is-boxed is-warning">
+                  <label class="file-label">
+                    <input
+                      onClick={this.imageUpload}
+                      class="file-input"
+                      type="file"
+                      name="userImage"
+                      id="file"
+
+                    />
+                    <span class="file-cta">
+                      <span class="file-icon">
+                        <i class="fas fa-upload" />
+                      </span>
+                      <span class="file-label">User Image…</span>
+                    </span>
+                    <span class="file-name" id="filename">
+                      Screen Shot 2017-07-29 at 15.54.25.png
+                    </span>
+                  </label>
+                </div>
+              </div>
             </figure>
 
             <div class="media-content">
-            
               <input
                 style={{ width: "300px" }}
                 class="input"
@@ -67,8 +91,8 @@ class AddReviewForm extends Component {
                 name="title"
                 value={this.state.review.title}
                 onChange={this.handleChange}
-              />   {" "}
-                <Rating
+              />{" "}
+              <Rating
                 emptySymbol={
                   <img
                     src="https://i.imgur.com/8pYLYaH.png"
@@ -94,8 +118,8 @@ class AddReviewForm extends Component {
               />
               <br />
               <input
-               style={{ width: "300px", marginTop:"10px" }}
-                class = "input"
+                style={{ width: "300px", marginTop: "10px" }}
+                class="input"
                 type="text"
                 placeholder="Name"
                 name="name"
@@ -106,7 +130,7 @@ class AddReviewForm extends Component {
                 <div class="field">
                   <p class="control">
                     <textarea
-                      style={{ marginTop:"10px" }}
+                      style={{ marginTop: "10px" }}
                       class="textarea"
                       placeholder="What ya think?..."
                       name="comment"
@@ -117,25 +141,13 @@ class AddReviewForm extends Component {
                 </div>
                 <div class="field">
                   <p class="control">
-                    <button class="button">Submit</button>
+                    <button class="button is-warning">Submit</button>
                   </p>
                 </div>
               </form>
             </div>
           </article>
-        </div>
-
-        {/* the start of old form  */}
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="file"
-            placeholder="User Image"
-            name="userImage"
-            value={this.state.review.userImage}
-            
-            onChange={this.handleChange}
-          />
-        </form>
+        </div>  
       </div>
     );
   }

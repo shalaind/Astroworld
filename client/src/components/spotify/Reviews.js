@@ -5,7 +5,6 @@ import EditReview from "./EditReview";
 // import Ratings from 'react-ratings-declarative';
 import Rating from "react-rating";
 
-
 class Reviews extends Component {
   state = {
     review: [{}],
@@ -63,46 +62,60 @@ class Reviews extends Component {
 
               <div className="media-content">
                 <div className="content">
-                    <p><strong>{allReviews.title}</strong></p>
+                  <p>
+                    <strong>{allReviews.title}</strong>
+                  </p>
 
-                    <Rating
-                      emptySymbol={
-                        <img
-                          src="https://i.imgur.com/8pYLYaH.png"
-                          style={{ width: "25px" }}
-                          alt="star icon"
-                          className="icon"
-                        />
-                      }
-                      fullSymbol={
-                        <img
-                          src="https://i.imgur.com/42SoNeS.png"
-                          style={{ width: "25px" }}
-                          alt="star icon"
-                          className="icon"
-                        />
-                      }
-                      initialRating={allReviews.rating}
-                      readonly
-                    />
+                  <Rating
+                    emptySymbol={
+                      <img
+                        src="https://i.imgur.com/8pYLYaH.png"
+                        style={{ width: "25px" }}
+                        alt="star icon"
+                        className="icon"
+                      />
+                    }
+                    fullSymbol={
+                      <img
+                        src="https://i.imgur.com/42SoNeS.png"
+                        style={{ width: "25px" }}
+                        alt="star icon"
+                        className="icon"
+                      />
+                    }
+                    initialRating={allReviews.rating}
+                    readonly
+                  />
 
-                    <br />
-                    <p>by {allReviews.name} </p>
+                  <br />
+                  <p>by {allReviews.name} </p>
 
-                    <div>
-                      {allReviews.isVisible ? (
-                        <EditReview
-                          review={allReviews}
-                          getAllReviews={this.getAllReviews}
-                        />
-                      ) : (
-                        <p onClick={() => this.toggleEditAddReviewForm(i)}>
-                          {allReviews.comment}
+                  <div>
+                    {allReviews.isVisible ? (
+                      <EditReview
+                        review={allReviews}
+                        getAllReviews={this.getAllReviews}
+                      />
+                    ) : (
+                      <p>
+                        {allReviews.comment}
+
+                        <p
+                          class="pointer"
+                          onClick={() => this.toggleEditAddReviewForm(i)}
+                          style={{
+                            fontSize: "15px",
+                            marginTop: "10px",
+                            color: "gray"
+                          }}
+                        >
+                          edit
                         </p>
-                      )}
-                    </div>
+                      </p>
+                    )}
+                  </div>
 
-                    <br />
+                  <br />
                 </div>
               </div>
 
@@ -113,26 +126,22 @@ class Reviews extends Component {
                 />
               </div>
             </article>
-
-      
           </div>
         ))}
 
-        {/* end of map */}
-     
+        <div style={{ width: "900px", marginBottom: "20px" }} class="container">
+          <p className="pointer" onClick={this.toggleAddReviewForm}>
+            Leave a Comment
+          </p>
+        </div>
 
-        <p className="pointer" onClick={this.toggleAddReviewForm}>
-          Leave a Comment
-        </p>
-
-        {this.state.reviewFormVisible ? (
-          <AddReviewForm
-            getAllReviews={this.getAllReviews}
-            toggleAddReviewForm={this.toggleAddReviewForm}
-          />
-        ) : null}
+          {this.state.reviewFormVisible ? (
+            <AddReviewForm
+              getAllReviews={this.getAllReviews}
+              toggleAddReviewForm={this.toggleAddReviewForm}
+            />
+          ) : null}
       </div>
-
     );
   }
 }

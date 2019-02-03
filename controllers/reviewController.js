@@ -1,4 +1,6 @@
 const Review = require('../models/Reviews')
+const fileUpload = require('express-fileupload');
+
 
 const reviewController = {
     index: (req, res) => {
