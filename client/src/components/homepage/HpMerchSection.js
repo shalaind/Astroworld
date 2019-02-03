@@ -7,7 +7,7 @@ class HpMerchSection extends Component {
     render() {
         return (
             <div className= 'hpOuter'>
-                <h1 className= "pageHeader">
+                <h1 className= "homepageMerch">
                 <span style={{color: "gold"}}>M</span>
                 <span style={{color: "red"}}>E</span>
                 <span style={{color: "black"}}>R</span>

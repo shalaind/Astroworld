@@ -1,17 +1,13 @@
 import React, { Component } from "react";
 import VoteCounter from "./VoteCounter";
-import AudioPlayer from "react-h5-audio-player";
 
 class SpotifyPlayer extends Component {
   render() {
     return (
-      <div>
-        <div className="card" style={{width: "500px", zIndex: "-6"}}>
-          <AudioPlayer
-            src="https://open.spotify.com/track/7wBJfHzpfI3032CSD7CE2m?si=kGBJCUntRMO0BFxUBq7uAQ"
-            onPlay={e => console.log("onPlay")}
-          />
-          <iframe
+      <div style={{width: "500px"}}>
+          <div class="card">
+  <div class="card-content">
+    <iframe
             title="star gazing"
             src={this.props.spotifyLink}
             width="300"
@@ -19,9 +15,22 @@ class SpotifyPlayer extends Component {
             frameBorder="0"
             allowtransparency="true"
             allow="encrypted-media"
-          />
-          <VoteCounter />
-        </div>
+          />  
+   
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+      </span>
+    </p>
+    <p class="card-footer-item">
+      <span>
+      <VoteCounter />
+      </span>
+    </p>
+  </footer>
+</div>
       </div>
     );
   }

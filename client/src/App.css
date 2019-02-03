@@ -1,7 +1,7 @@
 /* Global Styling */
 .pointer {
-  cursor: pointer ;
-  font-weight: 600; 
+  cursor: pointer;
+  font-weight: 600;
 }
 
 
@@ -11,19 +11,19 @@
 
 .heroImage {
   background-image: url("https://i.imgur.com/paIeLQj.jpg");
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  width: 100vw; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
   height: 100vh;
   margin: 0;
-  
+
 
 }
 
 /* Cloud Transition */
 
 .cloudTransition {
-  position: absolute; 
+  position: absolute;
   z-index: 12;
   width: 80vw;
   height: 70vh;
@@ -33,7 +33,7 @@
 }
 
 .cloudTransition2 {
-  position: absolute; 
+  position: absolute;
   z-index: 24;
   top: 100px;
   width: 60vw;
@@ -43,7 +43,7 @@
 }
 
 .cloudTransition3 {
-  position: absolute; 
+  position: absolute;
   z-index: 30;
   top: 200px;
   width: 80vw;
@@ -54,68 +54,67 @@
 
 @keyframes cloudOne {
   0% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
   100% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
 @keyframes cloudTwo {
   0% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
   100% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
 @keyframes cloudThree {
   0% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
   100% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
 /* Footer */
 
 .footerCon {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 .innerFooterCon {
-  margin-top: 4%; 
-  display: flex; 
-  flex-direction: row; 
+  margin-top: 4%;
+  display: flex;
+  flex-direction: row;
 
 }
 
 .navLinks {
-  font-weight: 500; 
+  font-weight: 500;
 
 }
 
-
 .hpMerch {
-  width: 100vw; 
+  width: 100vw;
   height: 50vh;
   padding: 0px;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  color: black; 
+  align-items: center;
+  color: black;
 }
 
-.hpMerch img{
-  width: 300px; 
+.hpMerch img {
+  width: 300px;
 }
 
 .hpOuter {
@@ -124,23 +123,19 @@
 }
 
 .buttonDiv {
-  display: flex; 
-  justify-content: center; 
-  margin: 40px; 
+  display: flex;
+  justify-content: center;
+  margin: 40px;
 
 }
 
-/* .footerTop {
-
-} */
-
 .footerBottom {
-  background-color: #070707; 
-  width: 100vw; 
+  background-color: #070707;
+  width: 100vw;
   height: 50px;
-  color: white; 
+  color: white;
   padding: 0px;
-  bottom:0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,11 +146,67 @@
 }
 
 .fwHeader {
-  width: 100vw; 
-  height: 40vh;
-  background-image: linear-gradient( rgba(147, 2, 135, 0.849), rgba(98, 0, 255, 0.856)), url('https://i.imgur.com/3hrdK1Z.jpg'); 
-  background-repeat:no-repeat; 
-  background-size:cover;
+  width: 100vw;
+  height: 20vh;
+  background-image: linear-gradient(rgba(49, 6, 73, 0.235), rgba(14, 4, 77, 0.796)), url('https://i.imgur.com/0fE1dFb.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+nav {
+  box-shadow: none;
+}
+
+.navbar-menu {
+  border: none;
+  box-shadow: none;
+}
+
+nav a {
+  background-color: black;
+  box-shadow: none !important;
+  box-shadow: 0px !important;
+}
+
+
+.pageHeader {
+  font-family: "Souvenir";
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  padding: 2%;
+}
+
+.homepageMerch {
+  font-family: "Souvenir";
+  text-align: center;
+  font-size: 4rem;
+  padding: 2%;
+}
+
+.merchTitle {
+  font-weight: 600; 
+  font-size: 12pt; 
+  color: black; 
+}
+
+.merchPrice {
+  font-size: 15pt; 
+  font-weight: 600; 
+}
+
+.itemName {
+  font-weight: 700; 
+  font-size: 30pt;
+  margin-top: 50px; 
+  color: black; 
+}
+
+.itemPrice {
+  font-weight: 600; 
+  font-size: 25pt; 
+  color: blue; 
+}
 

@@ -18,8 +18,8 @@ class ShopItem extends Component {
                 <img src= {this.props.itemImage} alt="merch" />
                 
                 </Link>
-                <h1 style={{fontSize: "12pt"}}>{this.props.itemName}</h1>
-                <h2>{this.props.itemPrice}</h2>
+                <h1 className = "merchTitle">{this.props.itemName}</h1>
+                <h2 className= "merchPrice">{this.props.itemPrice}</h2>
                 </div>
 
             </div>

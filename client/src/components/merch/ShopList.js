@@ -20,8 +20,10 @@ class ShopList extends Component {
         return (
             <div>
                 <Navbar />
-                <PageHeader />
-                <h1>Merch</h1>
+                <PageHeader pageTitle = "Astro Merch" />
+
+                <div class="container" style = {{marginBottom: "40px", marginTop: "40px", width: "60vw"}}>
+
                 <ShopItems>
                     <ShopItem 
                         itemLink = "astro-hoodie"
@@ -62,6 +64,7 @@ class ShopList extends Component {
                         itemPrice = "$95.00"
                     />
                 </ShopItems>
+                </div>
 
             </div>
         );

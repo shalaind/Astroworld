@@ -15,9 +15,8 @@ class ListeningParty extends Component {
         return (
             <div>
             <Navbar />
-            <PageHeader />
-             <h1>Listening Party</h1>
-             <h2>Preview the tracks below and vote on the ones you like</h2>
+            <PageHeader pageTitle = "Listening Party" />
+
             <SpotifyPlayer 
                 spotifyLink = "https://open.spotify.com/embed/track/7wBJfHzpfI3032CSD7CE2m"
             />
@@ -75,10 +74,10 @@ class ListeningParty extends Component {
 
             <Reviews/>
 
-            <button> Listen on Spotify </button>
+            {/* <button> Listen on Spotify </button>
             <button> Listen on Itunes </button>
             <button> Listen on apple music </button>
-            <button> Listen on google play </button>
+            <button> Listen on google play </button> */}
 
             </div>
         );

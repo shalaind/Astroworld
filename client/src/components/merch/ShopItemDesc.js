@@ -21,6 +21,11 @@ img{
 
 const RelatedItems = styled.div`
 display: flex; 
+flex-direction: column; 
+h3 {
+    font-size: 30pt;
+    font-family: 'Souvenir' 
+}
 img{
     width: 300px;
     margin: 50px; 
@@ -39,22 +44,45 @@ class ShopItemDesc extends Component {
             </LeftColumn>
             <RightColumn>
 
-                <h1> {this.props.itemName}</h1>
-                <h2>{this.props.itemPrice}</h2>
+                <h1 className= "itemName"> {this.props.itemName}</h1>
+                <h2 className="itemPrice">{this.props.itemPrice}</h2> <br />
+
                 <p>{this.props.itemDesc}</p>
                 <ul>
-                    <li>{this.props.bulletOne}</li>
-                    <li>{this.props.bulletTwo}</li>
-                    <li>{this.props.bulletThree}</li>
-                </ul>
-                <button> Add to Cart </button>
+                    <li> &#8226; {this.props.bulletOne}</li>
+                    <li>&#8226; {this.props.bulletTwo}</li>
+                    <li>&#8226; {this.props.bulletThree}</li>
+                </ul> <br /> 
+                <button className="button is-danger"> Add to Cart </button>
             </RightColumn>
 
             
             </OutsideCon>
 
                 <RelatedItems>
-                <h1>Related Items</h1>
+
+                <div>
+                <h3 class= "homepageMerch"> 
+                <span style={{color: "gold"}}> R </span>
+                <span style={{color: "red"}}> E </span>
+                <span style={{color: "black"}}> L </span>
+                <span style={{color: "blue"}}> A </span>
+                <span style={{color: "magenta"}}> T </span>
+                <span style={{color: "green"}}> E </span>
+                <span style={{color: "orange"}}> D </span>
+                &nbsp;
+                <span style={{color: "grey"}}> I </span>
+                <span style={{color: "gold"}}> T </span>
+                <span style={{color: "red"}}> E </span>
+                <span style={{color: "black"}}> M </span>
+                <span style={{color: "blue"}}> S </span>
+
+               </h3>
+
+              </div>
+
+            <div class="container" style={{display: "flex", marginBottom: "50px", textAlign: "center"}}>
+
                     <ShopItem 
                         itemLink = "astro-hoodie"
                         itemImage = "https://i.imgur.com/qU1lVDU.jpg" alt="travis scott merch"
@@ -73,6 +101,7 @@ class ShopItemDesc extends Component {
                         itemName = "Astro Denim Jacket" 
                         itemPrice = "$45.00"
                     />
+            </div>
                
                 </RelatedItems>
 

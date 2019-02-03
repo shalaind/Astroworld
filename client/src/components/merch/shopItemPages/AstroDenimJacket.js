@@ -17,7 +17,7 @@ class AstroDenimJacket extends Component {
                    bulletTwo = "heres the second bullet"
                    bulletThree = "heres the third bullet"
                    itemDesc= "this is the description for this item, blah, blah, blah, blah"
-                   itemImage = "https://i.imgur.com/6Vai1WS.png?1"
+                   itemImage = "https://i.imgur.com/LmhV1AF.png"
                />
             </div>
         );

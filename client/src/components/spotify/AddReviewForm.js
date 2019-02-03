@@ -53,8 +53,8 @@ class AddReviewForm extends Component {
 
   render() {
     return (
-      <div>
-        <div style={{ width: "70vw" }} class="container">
+      <div style={{ margin: "30px" }}>
+        <div style={{ width: "70vw"}} class="container">
           <article class="media">
             <figure class="media-left">
               <div class="field">

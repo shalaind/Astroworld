@@ -5,7 +5,7 @@ class PageHeader extends Component {
     return (
       <div>
         <div className="fwHeader">
-          <h1>Listening Party</h1>
+          <h1 class="pageHeader">{this.props.pageTitle}</h1>
         </div>
       </div>
     );

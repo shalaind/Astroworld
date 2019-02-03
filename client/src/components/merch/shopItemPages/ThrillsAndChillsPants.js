@@ -13,7 +13,7 @@ class ThrillsAndChillsPants extends Component {
                    bulletTwo = "heres the second bullet"
                    bulletThree = "heres the third bullet"
                    itemDesc= "this is the description for this item, blah, blah, blah, blah"
-                   itemImage = "https://i.imgur.com/L5pZYqi.jpg"
+                   itemImage = "https://i.imgur.com/NL21iSE.png"
                     />
             </div>
         );
