@@ -13,10 +13,10 @@ class AstroDenimJacket extends Component {
                    <ShopItemDesc
                    itemName = "Astro Denim Jacket"
                    itemPrice = "$45.00"
-                   bulletOne = "heres the first bullet"
-                   bulletTwo = "heres the second bullet"
-                   bulletThree = "heres the third bullet"
-                   itemDesc= "this is the description for this item, blah, blah, blah, blah"
+                   bulletOne = "Unisex Sizing"
+                   bulletTwo = "Custom hand-painted design"
+                   bulletThree = "Acid Wash Denim"
+                   itemDesc= "Impress the earthlings with this hand painted denim jacket."
                    itemImage = "https://i.imgur.com/LmhV1AF.png"
                />
             </div>

@@ -14,11 +14,11 @@ class AstroBeanie extends Component {
                     <ShopItemDesc
                    itemName = "Astro Beanie"
                    itemPrice = "$45.00"
-                   bulletOne = "heres the first bullet"
-                   bulletTwo = "heres the second bullet"
-                   bulletThree = "heres the third bullet"
-                   itemDesc= "this is the description for this item, blah, blah, blah, blah"
-                   itemImage = "https://i.imgur.com/oQXd5sS.jpg"
+                   bulletOne = "One size fits all"
+                   bulletTwo = "Embroidered Astroworld Logo"
+                   bulletThree = "100% Cotton"
+                   itemDesc= "Keep your head warm, while you're traveling the galaxy with this extra cozy Astroworld Beanie."
+                   itemImage = "https://i.imgur.com/21ojAKj.png"
                     />
             </div>
         );

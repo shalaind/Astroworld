@@ -16,7 +16,15 @@ const imageController = {
     },
 
     create: (req, res) => {
-        Image.create(req.body)
+    let imageUpload = req.files;
+    console.log(imageUpload)
+    const imagePath = `images/uploads/${req.files.imageUrl.name}`
+
+    Image.create({
+        name: req.body.username,
+        location: req.body.email,
+        imageUrl: imagePath
+    })
             .then((newImage) => {
                 res.send(newImage)
             })
