@@ -8,9 +8,9 @@ import FooterS3 from './FooterS3';
 const FooterDiv = styled.div`
 background-color: #020202; 
 width: 100vw; 
-height: 300px;
+height: 400px;
 color: white; 
-padding: 0px;
+padding: 25px;
 bottom:0;
 display:flex;
 justify-content: space-around; 

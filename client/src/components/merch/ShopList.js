@@ -30,18 +30,22 @@ class ShopList extends Component {
                         itemImage = "https://i.imgur.com/VDpcc9m.png" alt="travis scott merch"
                         itemName = "Astro Hoodie" 
                         itemPrice = "$45.00"
+                        rollOver = "https://i.imgur.com/VDpcc9m.png"
                         />
                     <ShopItem 
                         itemLink = "astro-tie-dye-tshirt"
                         itemImage = "https://i.imgur.com/x3BwBou.png" alt="travis scott merch"
                         itemName = "Tie Dye Tee" 
                         itemPrice = "$60.00"
+                        rollOver = "https://i.imgur.com/IpS1Cwr.png"
+
                     />
                     <ShopItem
                         itemLink = "astro-denim-jacket"
                         itemImage = "https://i.imgur.com/LmhV1AF.png" alt="travis scott merch"
                         itemName = "Astro Denim Jacket" 
                         itemPrice = "$75.00"
+                        rollOver = "https://i.imgur.com/1WnvbBC.png"
                     />
                 </ShopItems>
                 <ShopItems>
@@ -50,18 +54,21 @@ class ShopList extends Component {
                         itemImage = "https://i.imgur.com/uNvfHIV.png" alt="travis scott merch"
                         itemName = "Thrills and Chills Hoodie" 
                         itemPrice = "$78.00"
+                        rollOver = "https://i.imgur.com/EKaSGpz.png"
                     />
                     <ShopItem
                         itemLink = "thrills-and-chills-pants"
                         itemImage = "https://i.imgur.com/NL21iSE.png" alt="travis scott merch"
                         itemName = "Thrills and Chills SweatPants" 
                         itemPrice = "$85.00"
+                        rollOver = "https://i.imgur.com/NL21iSE.png"
                     />
                     <ShopItem
                         itemLink = "astro-beanie"
                         itemImage = "https://i.imgur.com/21ojAKj.png" alt="travis scott merch"
                         itemName = "Astro Beanie" 
                         itemPrice = "$95.00"
+                        rollOver = "https://i.imgur.com/21ojAKj.png"
                     />
                 </ShopItems>
                 </div>

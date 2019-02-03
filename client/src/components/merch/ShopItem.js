@@ -15,7 +15,7 @@ class ShopItem extends Component {
                             pathname:`/merch/${this.props.itemLink}` 
                         }
                     }>
-                <img src= {this.props.itemImage} alt="merch" />
+                <img src= {this.props.itemImage} alt="merch"  onMouseOver={e => (e.currentTarget.src = this.props.rollOver)} onMouseOut={e => (e.currentTarget.src = this.props.itemImage )}/>
                 
                 </Link>
                 <h1 className = "merchTitle">{this.props.itemName}</h1>

@@ -88,18 +88,21 @@ class ShopItemDesc extends Component {
                         itemImage = "https://i.imgur.com/qU1lVDU.jpg" alt="travis scott merch"
                         itemName = "Astro Hoodie" 
                         itemPrice = "$45.00"
+                        rollOver = "https://i.imgur.com/qU1lVDU.jpg"
                     />
                     <ShopItem 
                         itemLink = "astro-tie-dye-tshirt"
                         itemImage = "https://i.imgur.com/nyNTNdf.jpg" alt="travis scott merch"
                         itemName = "Tie Dye Tee" 
                         itemPrice = "$45.00"
+                        rollOver = "https://i.imgur.com/IpS1Cwr.png"
                     />
                     <ShopItem 
                         itemLink = "astro-denim-jacket"
                         itemImage = "https://i.imgur.com/LmhV1AF.png" alt="travis scott merch"
                         itemName = "Astro Denim Jacket" 
                         itemPrice = "$45.00"
+                        rollOver = "https://i.imgur.com/1WnvbBC.png"
                     />
             </div>
                
