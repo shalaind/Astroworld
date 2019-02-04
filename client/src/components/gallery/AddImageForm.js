@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import swal from 'sweetalert';
+
 
 class AddImageForm extends Component {
   state = {
@@ -35,10 +37,11 @@ class AddImageForm extends Component {
     event.preventDefault();
     const imageUpload = this.state.image;
     console.log(imageUpload);
-
+    
     axios.post("/api/image", imageUpload).then(res => {
       this.props.getAllImages();
       this.props.toggleAddImageForm();
+      swal("Enjoy The Ride!", "Your picture has been uploaded", "success");
     });
   };
 
@@ -84,7 +87,6 @@ class AddImageForm extends Component {
                 type="file"
                 name="imageUrl"
                 onChange={this.handleChange}
-                value={this.state.image.imageUrl}
               />
               <span class="file-cta">
                 <span class="file-icon">

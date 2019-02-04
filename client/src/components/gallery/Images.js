@@ -15,8 +15,6 @@ class Images extends Component {
 
   getAllImages = () => {
     axios.get(`/api/image`).then(res =>
-      // console.log(res.data)
-
       this.setState({ image: res.data })
     );
   };
@@ -29,9 +27,6 @@ class Images extends Component {
     });
   };
 
-  rollOverData = event => {
-    console.log("you are hovering");
-  };
 
   toggleAddImageForm = () => {
     this.setState({ imageFormVisible: !this.state.imageFormVisible });
@@ -55,9 +50,9 @@ class Images extends Component {
 
                     <span class="imgText">
                       <strong style={{ color: "white" }}>
-                        {concertPics.location}
+                      By: {concertPics.name}
                       </strong>
-                      <h3>By: {concertPics.name} </h3>
+                      <h3>{concertPics.location}</h3>
                     </span>
                   </div>
                 </div>

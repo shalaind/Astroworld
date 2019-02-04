@@ -13,7 +13,7 @@ class HpSection extends Component {
           <a href= "/gallery"> <button class="button is-white"> Click Here </button> </a>
         </div>
         <div className="hpCol2">
-          <img src="https://i.imgur.com/w82YwJx.jpg?1" alt="astroworld concert" />
+          <img src="http://loyolaphoenix.com/wp-content/uploads/2018/12/image-9.18.17-PM-1-1200x863.jpeg" alt="astroworld concert" />
         </div>
       </div>
     );
