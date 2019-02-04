@@ -31,7 +31,7 @@ Image.deleteMany({})
                     {
                         name: "John",
                         location: "Seattle, Wa",
-                        imageUrl: "https://sslh.ulximg.com/image/740x493/cover/1540494999_0bb66636ec70deba6b5e920dec4e7646.jpg/4a9fe885ae9e9b7fb8dcf0ce0ee2b2e5/1540494999_f46f64c6b3b0cf54a4b187e3c5ccd999.jpg"
+                        imageUrl: "https://www.texasmonthly.com/wp-content/uploads/2018/11/Travis-Scott_209405_AstroworldFestival2018_RogerHo-1200x750.jpg"
                     },
                     {
                         name: "C'zar",
@@ -83,25 +83,25 @@ Review.deleteMany({})
     .then(() => {
         return Review.create(
                 [{
-                        title: "this album is fire! ",
-                        rating: 4,
+                        title: "This album is fire! 🔥 ",
+                        rating: 5,
                         userImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kylie_Jenner2_%28cropped%29.png/220px-Kylie_Jenner2_%28cropped%29.png',
-                        name: 'Atlien',
-                        comment: 'Travis Scott is awesome! I had such a good time at this concert. There was a mosh pit and the energy was high throughout the entire night!'
+                        name: "BabyStormi's Bottle",
+                        comment: "Travis Scott has done it again! I've been waiting for this album to drop for months and Travis did not dissapoint!"
                     },
                     {
-                        title: "this album is fire! ",
-                        rating: 3,
+                        title: "Good, but not his best 😕" ,
+                        rating: 2,
                         userImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kylie_Jenner2_%28cropped%29.png/220px-Kylie_Jenner2_%28cropped%29.png',
-                        name: 'Atlien',
-                        comment: 'Travis Scott is awesome! I had such a good time at this concert. There was a mosh pit and the energy was high throughout the entire night!'
+                        name: 'TravisScottHater',
+                        comment: "I've heard better from Travis Scott. There are a few bangers here but overall I would not play this whole album from start to finish."
                     },
                     {
-                        title: "Not impressed ",
-                        rating: 2, 
+                        title: "La Flame is back! 🙏🏾🔥✨ ",
+                        rating: 5, 
                         userImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kylie_Jenner2_%28cropped%29.png/220px-Kylie_Jenner2_%28cropped%29.png',
-                        name: 'Atlien',
-                        comment: 'Travis Scott is awesome! I had such a good time at this concert. There was a mosh pit and the energy was high throughout the entire night!'
+                        name: 'Kylie Jenner Lip Kit',
+                        comment: 'Yesss! Every song is a hit! I cant wait until to see him perform live. Yosemite is the best song on the album!'
                     }
                 ]
             ).then((newReviews) => {
