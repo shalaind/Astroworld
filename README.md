@@ -51,7 +51,7 @@ https://trello.com/b/yKSfyy12/unit-3-mern-stack-app
 
 ## Lessons I've Learned
 - I've learned to not be afraid of experimenting and trying new things within my code. 
-- I was able to reach my mvp ahead of the deadline which gave me able time to tackle a few of my stretch and spend more time on the styling of the app. 
+- I was able to reach my mvp ahead of the deadline which gave me ample time to tackle a few of my stretch and spend more time on the styling of the app. 
 
 ## 2.0 features
 - Add functionality to the upload image form
